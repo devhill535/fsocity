@@ -75,7 +75,7 @@ client.on("message", async message => {
 **:shield:┊Security Commands :**
 \`f/settings\` 
 \`f/logs\` 
-[Support](https://discord.gg/SEdp93xACp) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=743085172085358683&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
+[Support](https://discord.gg/SEdp93xACp) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
 `);
 
     message.channel.send(help);
@@ -110,7 +110,7 @@ client.on("message", async message => {
        .setTitle(":link: Links")
       .addField(`:homes:`,`[ Support Server](https://discord.gg/robot)` )
       
-    . addField(`:envelope_with_arrow:`,`[ Invite Me](https://discord.com/api/oauth2/authorize?client_id=743085172085358683&permissions=8&scope=bot)`)
+    . addField(`:envelope_with_arrow:`,`[ Invite Me](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot)`)
      .setColor("#00000")
       .setThumbnail(message.author.avatarURL())
       
