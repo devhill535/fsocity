@@ -650,6 +650,88 @@ client.on("message", msg => {
 });
 
 
+let antibots = JSON.parse(fs.readFileSync("./antibots.json", "utf8"));
+///////////////////////////////////////////////////////////////////////////////
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "antibot on")) {
+    if (cooldown.has(message.author.id)) {
+      return message.channel.send(`You have to wait 5 seconds`).then(m => {
+        m.delete({ timeout: cdtime * 600 });
+      });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    let embed = new Discord.MessageEmbed().setColor("FF2900").setDescription(`
+Anti Bot on
+Enabled: ${botenabled}<a:emoji_6:852676488993833010>
+Moderator: <@${message.author.id}>
+`);
+    if (!message.channel.guild) return;
+    if (message.author.id !== message.guild.ownerID) return;
+    antibots[message.guild.id] = {
+      onoff: "On"
+    };
+    message.channel.send(embed);
+    fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
+      if (err)
+        console.error(err).catch(err => {
+          console.error(err);
+        });
+    });
+  }
+});
+///////////////////////////////////////////////////////////////////////////////
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "antibot off")) {
+    if (cooldown.has(message.author.id)) {
+      return message.channel.send(`You have to wait 5 seconds`).then(m => {
+        m.delete({ timeout: cdtime * 600 });
+      });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    let embed = new Discord.MessageEmbed().setColor("FF2900").setDescription(
+      `
+Anti Bot off
+Disabled: ${botdisabled}<a:emoji_6:852676488993833010>
+Moderator: <@${message.author.id}>
+`
+    );
+    if (!message.channel.guild) return;
+    if (message.author.id !== message.guild.ownerID) return;
+    antibots[message.guild.id] = {
+      onoff: "Off"
+    };
+    message.channel.send(embed);
+    fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
+      if (err)
+        console.error(err).catch(err => {
+          console.error(err);
+        });
+    });
+  }
+});
+///////////////////////////////////////////////////////////////////////////////
+client.on("guildMemberAdd", member => {
+  if (!antibots[member.guild.id])
+    antibots[member.guild.id] = {
+      onoff: "Off"
+    };
+  if (antibots[member.guild.id].onoff === "Off") return;
+  if (member.user.bot) return member.kick();
+});
+
+fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
+  if (err)
+    console.error(err).catch(err => {
+      console.error(err);
+    });
+});
+
 
 
 
