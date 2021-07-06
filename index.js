@@ -53,13 +53,13 @@ client.on("message", async message => {
       .setTitle(`The Command List Of Bot`)
       .setDescription(`
      ━────╮•╭────━
-**📘┊Info Commands :** 
+**<a:zangana22:862038781851074570>┊Info Commands :** 
 \`f/user\`
 \`f/support\`
 \`f/invite\`
 \`f/about\`
 ━────╮•╭────━
-**:zap:┊Admin Commands :**
+**<a:emoji_49:861705616447242272>┊Admin Commands :**
 \`f/lock\` 
 \`f/unlock\` 
 \`f/lock all\` 
@@ -72,7 +72,7 @@ client.on("message", async message => {
 \`f/unmute\`: @User 
 \`f/slowmode\`: __Set the channel__
 ━────╮•╭────━
-**:shield:┊Security Commands :**
+**<a:emoji_59:861705138498306058>┊Security Commands :**
 \`f/settings\` 
 \`f/logs\` 
 [Support](https://discord.gg/SEdp93xACp) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
