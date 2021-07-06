@@ -70,7 +70,7 @@ client.on("message", async message => {
 \`f/nick\` : __@User__
 \`f/mute\` : __@User__
 \`f/unmute\`: __@User__
-\`f/slowmode\`: __#channel__
+\`f/slowmode\`: __Set the channel__
 ━────╮•╭────━
 **<a:emoji_59:861993868227641384>┊Security Commands :**
 \`f/settings\` 
