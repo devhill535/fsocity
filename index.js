@@ -54,25 +54,25 @@ client.on("message", async message => {
       .setDescription(`
      ━────╮•╭────━
 **<a:emoji_8:852676588067225609>┊Info Commands :** 
-\`f/user\`
-\`f/support\`
-\`f/invite\`
-\`f/about\`
+\`f/user\`:__Get your/someones__
+\`f/support\`__support servar discord__
+\`f/invite\`:__To invite Ace bot to your__
+\`f/about\`:__bot info bletr__
 ━────╮•╭────━
-**<a:emoji_59:861993868227641384>┊Admin Commands :**
-\`f/lock\` 
-\`f/unlock\` 
-\`f/lock all\` 
-\`f/unlock all\`
-\`f/clear\`
-\`f/ban\` : @User
-\`f/kick\`: @User
-\`f/nick\`: @User
-\`f/mute\`: @User
-\`f/unmute\`: @User 
+**<a:emoji_35:861993084769009694>┊Admin Commands :**
+\`f/lock\`: __To lock the channel from__
+\`f/unlock\`: __To unlock the channel from__
+\`f/lock all\`: __To lock the channel all from__
+\`f/unlock all\`:__To unlock the channel all from__
+\`f/clear\`:__Clear chat messages__
+\`f/ban\`: __Ban someone in the server__
+\`f/kick\`: __kick someone in the server__
+\`f/nick\`: __nick add user__
+\`f/mute\`: __Mute someone__
+\`f/unmute\`: __Unmute someone__
 \`f/slowmode\`: __Set the channel__
 ━────╮•╭────━
-**<a:emoji_59:861705138498306058>┊Security Commands :**
+**<a:emoji_59:861993868227641384>┊Security Commands :**
 \`f/settings\` 
 \`f/logs\` 
 [Support](https://discord.gg/SEdp93xACp) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
