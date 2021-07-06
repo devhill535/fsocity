@@ -178,10 +178,9 @@ client.on("message", async message => {
      
       .setColor("#00000")
       .setDescription(
-        `🔒 | Locked Channel
+        `<:emoji_50:861993564389244988> | Locked Channel
 Channel Name : <#${message.channel.id}>
 Locked By : <@${message.author.id}>
-Channel Status : Send Message : ❌
 `
       )
       .setThumbnail(message.author.avatarURL())
@@ -208,10 +207,9 @@ client.on("message", async message => {
     const unlock = new Discord.MessageEmbed()
       .setColor("#00000")
       .setDescription(
-        `🔓 | UnLocked Channel
+        `<:emoji_44:861993374898454551> | UnLocked Channel
 Channel Name : <#${message.channel.id}>
 Locked By : <@${message.author.id}>
-Channel Status : Send Message : ✅
 `
       )
       .setThumbnail(message.author.avatarURL())
@@ -434,9 +432,9 @@ client.on("message", prof => {
       .setThumbnail(client.user.avatarURL())
       .setColor("#0c0b0b")
       .setTitle("Your Info User")
-      .addField(" ▶️| Your Name", `<@${prof.author.id}>`)
-      .addField(" 🆔| Your ID", `${prof.author.id}`)
-      .addField(" 🌐| Create User", prof.author.createdAt.toLocaleString())
+      .addField(" <:emoji_39:861993236746993675>| Your Name", `<@${prof.author.id}>`)
+      .addField(" <:emoji_37:861993155703472139>| Your ID", `${prof.author.id}`)
+      .addField(" <a:emoji_20:852676899750150145>| Create User", prof.author.createdAt.toLocaleString())
       .setFooter(`Requested | ${prof.author.tag}`, prof.author.avatarURL())
       .setTimestamp();
     prof.channel.send(professor);
