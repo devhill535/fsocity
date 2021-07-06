@@ -59,7 +59,7 @@ client.on("message", async message => {
 \`f/invite\`
 \`f/about\`
 ━────╮•╭────━
-**<a:emoji_35:861993084769009694>┊Admin Commands :**
+**<a:emoji_35:861705616447242272>┊Admin Commands :**
 \`f/lock\`
 \`f/unlock\`
 \`f/lock all\`
