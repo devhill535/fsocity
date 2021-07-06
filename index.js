@@ -665,7 +665,7 @@ client.on("message", message => {
     }, cdtime * 1000);
     let embed = new Discord.MessageEmbed().setColor("FF2900").setDescription(`
 Anti Bot on
-Enabled: ${botenabled}<a:emoji_6:852676488993833010>
+Enabled: ${clientenabled}<a:emoji_6:852676488993833010>
 Moderator: <@${message.author.id}>
 `);
     if (!message.channel.guild) return;
@@ -697,7 +697,7 @@ client.on("message", message => {
     let embed = new Discord.MessageEmbed().setColor("FF2900").setDescription(
       `
 Anti Bot off
-Disabled: ${botdisabled}<a:emoji_6:852676488993833010>
+Disabled: ${clientdisabled}<a:emoji_6:852676488993833010>
 Moderator: <@${message.author.id}>
 `
     );
