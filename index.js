@@ -52,14 +52,14 @@ client.on("message", async message => {
       .setThumbnail(message.author.avatarURL())
       .setTitle(`The Command List Of Bot`)
       .setDescription(`
-     ━────╮•╭────━
-**<a:emoji_49:861993868227641384>┊Info Commands :** 
+     ━────╮<a:emoji_31:861992985004081212>╭────━
+**<a:emoji_35:861993084769009694>┊Info Commands :** 
 \`f/user\`
 \`f/support\`
 \`f/invite\`
 \`f/about\`
-━────╮•╭────━
-**<a:emoji_35:861705616447242272>┊Admin Commands :**
+━────╮<a:emoji_31:861992985004081212>╭────━
+**<a:emoji_49:861993526560161852>┊Admin Commands :**
 \`f/lock\`
 \`f/unlock\`
 \`f/lock all\`
@@ -71,7 +71,7 @@ client.on("message", async message => {
 \`f/mute\` : __@User__
 \`f/unmute\`: __@User__
 \`f/slowmode\`: __Set the channel__
-━────╮•╭────━
+━────╮<a:emoji_31:861992985004081212>╭────━
 **<a:emoji_59:861993868227641384>┊Security Commands :**
 \`f/settings\` 
 \`f/logs\` 
