@@ -54,23 +54,23 @@ client.on("message", async message => {
       .setDescription(`
      ━────╮•╭────━
 **<a:emoji_8:852676588067225609>┊Info Commands :** 
-\`f/user\`:__Get your/someones__
-\`f/support\`__support servar discord__
-\`f/invite\`:__To invite Ace bot to your__
-\`f/about\`:__bot info bletr__
+\`f/user\`
+\`f/support\`
+\`f/invite\`
+\`f/about\`
 ━────╮•╭────━
 **<a:emoji_35:861993084769009694>┊Admin Commands :**
-\`f/lock\`: __To lock the channel from__
-\`f/unlock\`: __To unlock the channel from__
-\`f/lock all\`: __To lock the channel all from__
-\`f/unlock all\`:__To unlock the channel all from__
-\`f/clear\`:__Clear chat messages__
-\`f/ban\`: __Ban someone in the server__
-\`f/kick\`: __kick someone in the server__
-\`f/nick\`: __nick add user__
-\`f/mute\`: __Mute someone__
-\`f/unmute\`: __Unmute someone__
-\`f/slowmode\`: __Set the channel__
+\`f/lock\`
+\`f/unlock\`
+\`f/lock all\`
+\`f/unlock all\`
+\`f/clear\`
+\`f/ban\` : __@User__
+\`f/kick\` : __@User__
+\`f/nick\` : __@User__
+\`f/mute\` : __@User__
+\`f/unmute\`: __@User__
+\`f/slowmode\`: __#channel__
 ━────╮•╭────━
 **<a:emoji_59:861993868227641384>┊Security Commands :**
 \`f/settings\` 
