@@ -50,7 +50,7 @@ client.on("message", async message => {
       .setFooter(message.author.username, message.author.AvatarURL)
      
       .setThumbnail(message.author.avatarURL())
-      .setTitle(`The Command List Of Bot`)
+      .setTitle(`All Commands Bot Fsociety: <:emoji_54:861993699633266708>`)
       .setDescription(`
      ━────╮<a:emoji_31:861992985004081212>╭────━
 **<a:emoji_35:861993084769009694>┊Info Commands :** 
@@ -77,6 +77,7 @@ client.on("message", async message => {
 \`f/log\` Or :__Set {#channel}__
 \`f/stats\` Or \`f/reset\`
 \`f/logs\` :__Someone's ID__
+\`f/antibot\`__off , On__
 [Support](https://discord.gg/SEdp93xACp) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
 `);
 
