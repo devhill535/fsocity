@@ -73,8 +73,10 @@ client.on("message", async message => {
 \`f/slowmode\`: __Set the channel__
 ━────╮<a:emoji_31:861992985004081212>╭────━
 **<a:emoji_59:861993868227641384>┊Security Commands :**
-\`f/settings\` 
-\`f/logs\` 
+\`f/settings\` Or \`f/anti\`
+\`f/log\` Or\`f/loggingchannel\` :__Set the {#channel}__
+\`f/stats\` Or\`f/reset\`
+\`f/logs\` __Someone's ID__
 [Support](https://discord.gg/SEdp93xACp) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
 `);
 
