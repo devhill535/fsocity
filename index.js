@@ -78,8 +78,12 @@ client.on("message", async message => {
 \`f/stats\` Or \`f/reset\`
 \`f/logs\` : __Someone's ID__
 \`f/antibot\` : __off , On__
-[Support](https://discord.gg/SEdp93xACp) - [invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me)
-[invite](https://discord.gg/SEdp93xACp)
+__Brdne bota Boservart__
+[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot)
+__Website botaka__
+[Website](https://fsociety-bot4700.glitch.me)
+__Support Krdne Servar Ema__
+[Support](https://discord.gg/SEdp93xACp)
 `);
 
     message.channel.send(help);
