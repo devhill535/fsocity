@@ -53,13 +53,13 @@ client.on("message", async message => {
       .setTitle(`The Command List Of Bot`)
       .setDescription(`
      ━────╮•╭────━
-**<a:zangana22:862038781851074570>┊Info Commands :** 
+**<a:emoji_8:852676588067225609>┊Info Commands :** 
 \`f/user\`
 \`f/support\`
 \`f/invite\`
 \`f/about\`
 ━────╮•╭────━
-**<a:emoji_49:861705616447242272>┊Admin Commands :**
+**<a:emoji_59:861993868227641384>┊Admin Commands :**
 \`f/lock\` 
 \`f/unlock\` 
 \`f/lock all\` 
