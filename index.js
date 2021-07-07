@@ -662,6 +662,53 @@ client.on('message',async message => {
 })
 
 
+client.on("message", message => {
+  if (message.content.startsWith(prefix + "messages")) {
+    let args = message.content.split(" ").slice(1);
+    if (!message.member.hasPermission("OWNERSHIP"))
+      return message.reply("you dont have a Permission");
+
+    var user = message.mentions.users.first();
+    var rn = args.slice(1).join(" ");
+    let em = new Discord.MessageEmbed()
+      .setTitle("Error :")
+      .setColor("808080")
+      .setDescription(
+        `
+  **Usage:**
+ ${prefix}messages (user) (reason)
+
+  Ex :
+  ${prefix}messages ${message.author} 
+  ${prefix}messages ${message.author}  test
+ 
+  `
+      )
+      .setAuthor(message.author.username, message.author.avatarURL());
+    if (!user) return message.channel.send(em);
+
+    let ffg = new Discord.MessageEmbed()
+      .setColor("#080808")
+      .setTimestamp()
+      .setTitle("Warned!")
+      .setDescription(
+        `
+
+
+ warned by  : ${message.author.username}
+ reason     : ${rn}
+
+
+  `
+      )
+      .setAuthor(message.author.username, message.author.avatarURL())
+      .setFooter(``);
+    message.channel.send(ffg);
+    user.send(ffg);
+    message.delete();
+  }
+});
+
 
 
 client.login("ODA2MDc0NjMzMTkwODk5NzMy.YBkJgA.tmzfJbNllG4DKRkGkh4OSMNpeoU");
