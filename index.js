@@ -651,5 +651,19 @@ client.on("message", msg => {
 });
 
 
+client.on('message',async message => {
+  if(message.content.startsWith(prefix + "uptime")) { 
+    let rozh= Math.floor(client.uptime / 86400000);
+    let katzhmer= Math.floor(client.uptime / 3600000) % 24;
+    let daqa= Math.floor(client.uptime / 60000) % 60;
+    let chrka= Math.floor(client.uptime / 1000) % 60;
+    
+    return message.channel.send(`__Uptime:__\n${rozh}d ${katzhmer}h ${daqa}m ${chrka}s`);
+  }
+  
+})
+
+
+
 
 client.login("ODA2MDc0NjMzMTkwODk5NzMy.YBkJgA.tmzfJbNllG4DKRkGkh4OSMNpeoU");
