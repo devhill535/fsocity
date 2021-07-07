@@ -569,8 +569,9 @@ client.on("message", async message => {
         : `Kicked by ${message.author.tag}`
     )
       .then(() =>
-        message.channel.send(
-          `**✅ ${mode == "ban" ? "Bann" : mode}ed ${user.user.tag} from the server! :airplane: **`
+        message.channel.send(`
+  Moderator: <@${message.author.id}>
+**<:emoji_58:861993831242137630> ${mode == "ban" ? "Bann" : mode}ed ${user.user.tag}**`
         )
       )
       .catch(console.error);
