@@ -63,11 +63,11 @@ client.on("message", async message => {
 \`f/lock all\`
 \`f/unlock all\`
 \`f/clear\`
-\`f/ban\` : __@User__
-\`f/kick\` : __@User__
-\`f/nick\` : __@User__
-\`f/mute\` : __@User__
-\`f/unmute\`: __@User__
+\`f/ban\` : __@User ,Or Id__
+\`f/kick\` : __@User ,Or Id__
+\`f/nick\` : __@User ,Or Id__
+\`f/mute\` : __@User ,Or Id__
+\`f/unmute\`: __@User ,Or Id__
 \`f/slowmode\`: __Set the channel__
 ━────╮<a:emoji_31:861992985004081212>╭────━
 **<a:emoji_59:861993868227641384>┊Security Commands :(7)**
@@ -677,8 +677,6 @@ client.on("message", message => {
         `
   **Usage:**
  ${prefix}messages (user) (reason)
-
-  Ex :
   ${prefix}messages ${message.author} 
   ${prefix}messages ${message.author}  test
  
