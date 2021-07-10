@@ -27,6 +27,7 @@ const cooldown = new Set();
 const cdtime = 10;
 
  const prefix = "f/";
+ const prefix = "F/";
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help")) {
    if (!message.channel.guild)
