@@ -54,7 +54,7 @@ client.on("message", async message => {
       .setDescription(`
      ━────╮<a:emoji_31:861992985004081212>╭────━
 **<a:emoji_35:861993084769009694>┊Info Commands : {6}** 
-> \`f/user\` ,\`f/support\` ,\`f/invite\`
+> \`f/user\` ,\`f/botlist\` ,\`f/invite\`
 > \`f/bots\` ,\`f/uptime\` ,\`f/messages\`
 ━────╮<a:emoji_31:861992985004081212>╭────━
 **<a:emoji_49:861993526560161852>┊Admin Commands : {11}**
@@ -83,7 +83,7 @@ client.on("message", async message => {
   }
 });
 client.on("message", message => {
-if(message.content.startsWith(prefix + 'servers')) {
+if(message.content.startsWith(prefix + 'server')) {
 message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
 
 
@@ -586,7 +586,7 @@ client.on("guildDelete", guild => {
 
 
 client.on("message", message => {
-  if (message.content.startsWith(prefix + "bot list")) {
+  if (message.content.startsWith(prefix + "botlist")) {
     var list_all = [];
     message.guild.members.cache.forEach(client => {
       if (!client.user.bot) return;
