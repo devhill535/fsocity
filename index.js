@@ -54,28 +54,28 @@ client.on("message", async message => {
       .setDescription(`
      ━────╮<a:emoji_31:861992985004081212>╭────━
 **<a:emoji_35:861993084769009694>┊Info Commands : {6}** 
-\`f/user\` ,\`f/support\` ,\`f/invite\`
-\`f/bots\` ,\`f/uptime\` ,\`f/messages\`
+> \`f/user\` ,\`f/support\` ,\`f/invite\`
+> \`f/bots\` ,\`f/uptime\` ,\`f/messages\`
 ━────╮<a:emoji_31:861992985004081212>╭────━
 **<a:emoji_49:861993526560161852>┊Admin Commands : {11}**
-\`f/lock\`
-\`f/unlock\`
-\`f/lock all\`
-\`f/unlock all\`
-\`f/clear\`
-\`f/ban\` : __@User ,Or Id__
-\`f/kick\` : __@User ,Or Id__
-\`f/nick\` : __@User ,Or Id__
-\`f/mute\` : __@User ,Or Id__
-\`f/unmute\`: __@User ,Or Id__
-\`f/slowmode\`: __Set the channel__
+> \`f/lock\`
+> \`f/unlock\`
+> \`f/lock all\`
+> \`f/unlock all\`
+> \`f/clear\`
+> \`f/ban\` : __@User ,Or Id__
+> \`f/kick\` : __@User ,Or Id__
+> \`f/nick\` : __@User ,Or Id__
+> \`f/mute\` : __@User ,Or Id__
+> \`f/unmute\`: __@User ,Or Id__
+> \`f/slowmode\`: __Set the channel__
 ━────╮<a:emoji_31:861992985004081212>╭────━
 **<a:emoji_59:861993868227641384>┊Security Commands : {7}**
-\`f/settings\` Or \`f/anti\`
-\`f/log\` Or : __Set {#channel}__
-\`f/stats\` Or \`f/reset\`
-\`f/logs\` : __Someone's ID__
-\`f/antibot\` : __off , On__
+> \`f/settings\` Or \`f/anti\`
+> \`f/log\` Or : __Set {#channel}__
+> \`f/stats\` Or \`f/reset\`
+> \`f/logs\` : __Someone's ID__
+> \`f/antibot\` : __off , On__
 [invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me) - [Support](https://discord.gg/SEdp93xACp)
 `);
 
@@ -275,35 +275,7 @@ client.on("message", msg => {
 });
     
  
-client.on("message", async message => {
-  if (message.content.startsWith(prefix + "support")) {
-     if (cooldown.has(message.author.id)) {
-      return message.channel
-        .send(`⏳ | Please wait for 10 second`)
-        .then(m => {
-          m.delete({ timeout: cdtime * 600 });
-        });
-    }
-    cooldown.add(message.author.id);
-    setTimeout(() => {
-      cooldown.delete(message.author.id);
-    }, cdtime * 1000);
-    let invite = new Discord.MessageEmbed()
-      .setColor("#00000")
-      .setFooter(client.user.username)
-      .setImage( "https://media.discordapp.net/attachments/731655759519154230/732012564984102973/ImpracticalFearfulEsok-size_restricted_1.gif")
-      .setTitle(
-        "**__CLICK HERE TO  SUPPORT SERVER__**"
-      )
-      .setURL(
-        `https://discord.gg/SEdp93xACp`)
-   .setTimestamp()
-         .setTimestamp()
 
-    message.channel.send(invite);
-  message.react("✅");
-  }
-});
 client.on("message", message => {
   if (message.content.startsWith(prefix + "nick")) {
     if (!message.guild.member(message.author).hasPermission("MANAGE_NICKNAMES"))
@@ -570,7 +542,7 @@ client.on("message", async message => {
     )
       .then(() =>
         message.channel.send(`
-         Moderator: <@${message.author.id}>
+           Moderator: <@${message.author.id}>
 **<:emoji_58:861993831242137630> ${mode == "ban" ? "Bann" : mode}ed ${user.user.tag}**`
         )
       )
