@@ -76,7 +76,7 @@ client.on("message", async message => {
 > \`f/stats\` Or \`f/reset\`
 > \`f/logs\` : __Someone's ID__
 > \`f/antibot\` : __off , On__
-[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me) - [Support](https://discord.gg/SEdp93xACp)
+[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me) - [Support](https://discord.gg/PftVmBUr5X)
 `);
 
     message.channel.send(help);
@@ -147,11 +147,11 @@ client.on("message", message => {
 
       .setDescription(`
 •••••
-🔳 **Servers** : ${client.guilds.cache.size}
+<a:emoji_51:861993623565369354> **Servers** : ${client.guilds.cache.size}
 •••••
-🔰 **Users** : ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
+<a:emoji_51:861993623565369354> **Users** : ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 •••••
-🚦 **Channels** : ${client.channels.cache.size}
+<a:emoji_51:861993623565369354> **Channels** : ${client.channels.cache.size}
 •••••`
       )
       .setColor("#0000")
