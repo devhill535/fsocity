@@ -27,7 +27,6 @@ const cooldown = new Set();
 const cdtime = 10;
 
  const prefix = "f/";
- const prefix = "F/";
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help")) {
    if (!message.channel.guild)
@@ -37,7 +36,7 @@ client.on("message", async message => {
     
     if (cooldown.has(message.author.id)) {
       return message.channel
-        .send(`⏳ | Please wait for 10 second`)
+        .send(`<a:emoji_49:861993526560161852> | Please wait for 10 second`)
         .then(m => {
           m.delete({ timeout: cdtime * 600 });
         });
