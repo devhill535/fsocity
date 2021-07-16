@@ -76,7 +76,7 @@ client.on("message", async message => {
 > \`f/stats\` Or \`f/reset\`
 > \`f/logs\` : __Someone's ID__
 > \`f/antibot\` : __off , On__
-[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](https://fsociety-bot4700.glitch.me) - [Support](https://discord.gg/PftVmBUr5X)
+[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](http://www.fsocietybot.ml) - [Support](https://discord.gg/PftVmBUr5X)
 `);
 
     message.channel.send(help);
