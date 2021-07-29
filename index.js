@@ -31,7 +31,7 @@ client.on("message", async message => {
   if (message.content.startsWith(prefix+"help")) {
    if (!message.channel.guild)
       return message.channel.send(
-         "**❌ | Sorry This Command Only For Servers .**")
+         "**❌ | Sorry This Command Only For Servers **")
 
     
     if (cooldown.has(message.author.id)) {
