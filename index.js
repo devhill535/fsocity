@@ -53,11 +53,11 @@ client.on("message", async message => {
       .setTitle(`All Commands Bot Fsociety: <:emoji_54:861993699633266708>`)
       .setDescription(`
      ━────╮<:emoji_52:861993660748922940>╭────━
-**<a:emoji_35:861993084769009694>┊Info Commands : {6}** 
+**┊Info Commands : {6}** 
 > \`f/user\` ,\`f/botlist\` ,\`f/invite\`
 > \`f/bots\` ,\`f/uptime\` ,\`f/messages\`
 ━────╮<:emoji_52:861993660748922940>╭────━
-**<a:emoji_49:861993526560161852>┊Admin Commands : {11}**
+**┊Admin Commands : {11}**
 > \`f/lock\`
 > \`f/unlock\`
 > \`f/lock all\`
@@ -70,7 +70,7 @@ client.on("message", async message => {
 > \`f/unmute\`: __@User ,Or Id__
 > \`f/slowmode\`: __Set the channel__
 ━────╮<:emoji_52:861993660748922940>╭────━
-**<a:emoji_59:861993868227641384>┊Security Commands : {7}**
+**┊Security Commands : {7}**
 > \`f/settings\` Or \`f/anti\`
 > \`f/log\` Or : __Set {#channel}__
 > \`f/stats\` Or \`f/reset\`
