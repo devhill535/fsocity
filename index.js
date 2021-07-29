@@ -731,4 +731,4 @@ client.on("message", message => {
 
 
 
-client.login("ODAzNjUwNDI2NTcwMDE0NzMw.YBA3yA.5OhPg2XG7z0Xk9nSN4JmwqbcZDk");
+client.login("");
