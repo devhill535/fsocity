@@ -52,11 +52,11 @@ client.on("message", async message => {
       .setThumbnail(message.author.avatarURL())
       .setTitle(`All Commands Bot Fsociety: <:emoji_54:861993699633266708>`)
       .setDescription(`
-     ━────╮<:emoji_52:861993660748922940>╭────━
+     ━────╮╭────━
 **┊Info Commands : {6}** 
 > \`f/user\` ,\`f/botlist\` ,\`f/invite\`
 > \`f/bots\` ,\`f/uptime\` ,\`f/messages\`
-━────╮<:emoji_52:861993660748922940>╭────━
+━────╮╭────━
 **┊Admin Commands : {11}**
 > \`f/lock\`
 > \`f/unlock\`
@@ -69,7 +69,7 @@ client.on("message", async message => {
 > \`f/mute\` : __@User ,Or Id__
 > \`f/unmute\`: __@User ,Or Id__
 > \`f/slowmode\`: __Set the channel__
-━────╮<:emoji_52:861993660748922940>╭────━
+━────╮╭────━
 **┊Security Commands : {7}**
 > \`f/settings\` Or \`f/anti\`
 > \`f/log\` Or : __Set {#channel}__
@@ -147,11 +147,11 @@ client.on("message", message => {
 
       .setDescription(`
 •••••
-<a:emoji_51:861993623565369354> **Servers** : ${client.guilds.cache.size}
+ **Servers** : ${client.guilds.cache.size}
 •••••
-<a:emoji_51:861993623565369354> **Users** : ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
+ **Users** : ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 •••••
-<a:emoji_51:861993623565369354> **Channels** : ${client.channels.cache.size}
+ **Channels** : ${client.channels.cache.size}
 •••••`
       )
       .setColor("#0000")
@@ -179,7 +179,7 @@ client.on("message", async message => {
      
       .setColor("#00000")
       .setDescription(
-        `<:emoji_50:861993564389244988> | Locked Channel
+        `🔒 | Locked Channel
 Channel Name : <#${message.channel.id}>
 Locked By : <@${message.author.id}>
 `
@@ -208,7 +208,7 @@ client.on("message", async message => {
     const unlock = new Discord.MessageEmbed()
       .setColor("#00000")
       .setDescription(
-        `<:emoji_44:861993374898454551> | UnLocked Channel
+        `🔓 | UnLocked Channel
 Channel Name : <#${message.channel.id}>
 Locked By : <@${message.author.id}>
 `
@@ -405,9 +405,9 @@ client.on("message", prof => {
       .setThumbnail(client.user.avatarURL())
       .setColor("#0c0b0b")
       .setTitle("Your Info User")
-      .addField(" <:emoji_39:861993236746993675>| Your Name", `<@${prof.author.id}>`)
-      .addField(" <:emoji_37:861993155703472139>| Your ID", `${prof.author.id}`)
-      .addField(" <a:emoji_20:852676899750150145>| Create User", prof.author.createdAt.toLocaleString())
+      .addField(" **| Your Name**", `<@${prof.author.id}>`)
+      .addField(" **| Your ID**", `${prof.author.id}`)
+      .addField(" **| Create User**", prof.author.createdAt.toLocaleString())
       .setFooter(`Requested | ${prof.author.tag}`, prof.author.avatarURL())
       .setTimestamp();
     prof.channel.send(professor);
@@ -543,7 +543,7 @@ client.on("message", async message => {
       .then(() =>
         message.channel.send(`
            Moderator: <@${message.author.id}>
-**<:emoji_58:861993831242137630> ${mode == "ban" ? "Bann" : mode}ed ${user.user.tag}**`
+** ${mode == "ban" ? "Bann" : mode}ed ${user.user.tag}**`
         )
       )
       .catch(console.error);
@@ -707,7 +707,7 @@ client.on("message", message => {
         });
       });
       return message.channel.send(
-        "** <:emoji_5:852675815976337418>Unban all members **"
+        "** Unban all members **"
       );
     }
     if (!args)
