@@ -147,11 +147,11 @@ client.on("message", message => {
 
       .setDescription(`
 •••••
- **Servers** : ${client.guilds.cache.size}
+❯  **Servers** : ${client.guilds.cache.size}
 •••••
- **Users** : ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
+❯  **Users** : ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 •••••
- **Channels** : ${client.channels.cache.size}
+❯  **Channels** : ${client.channels.cache.size}
 •••••`
       )
       .setColor("#0000")
@@ -180,8 +180,8 @@ client.on("message", async message => {
       .setColor("#00000")
       .setDescription(
         `🔒 | Locked Channel
-Channel Name : <#${message.channel.id}>
-Locked By : <@${message.author.id}>
+❯ **Channel Name :** <#${message.channel.id}>
+❯ **Locked By :** <@${message.author.id}>
 `
       )
       .setThumbnail(message.author.avatarURL())
@@ -209,8 +209,8 @@ client.on("message", async message => {
       .setColor("#00000")
       .setDescription(
         `🔓 | UnLocked Channel
-Channel Name : <#${message.channel.id}>
-Locked By : <@${message.author.id}>
+❯ **Channel Name :** <#${message.channel.id}>
+❯ **Locked By :** <@${message.author.id}>
 `
       )
       .setThumbnail(message.author.avatarURL())
@@ -230,9 +230,9 @@ client.on("message", msg => {
       .setColor("#00000")
       .setDescription(
         `❌ | **Deleted Message**
-**Channel Name** : <#${msg.channel.id}>
-**Message By** : <@${msg.author.id}>
-**Reason** : Send Everyone : ❌
+❯ **Channel Name** : <#${msg.channel.id}>
+❯ **Message By** : <@${msg.author.id}>
+❯ **Reason** : Send Everyone : ❌
 `
       )
       .setThumbnail(msg.author.avatarURL())
@@ -259,9 +259,9 @@ client.on("message", msg => {
       .setColor("#00000")
       .setDescription(
         `❌ | **Deleted Message**
-**Channel Name** : <#${msg.channel.id}>
-**Message By** : <@${msg.author.id}>
-**Reason** : Send Here : ❌
+❯ **Channel Name** : <#${msg.channel.id}>
+❯ **Message By** : <@${msg.author.id}>
+❯ **Reason** : Send Here : ❌
 `
       )
       .setThumbnail(msg.author.avatarURL())
@@ -315,11 +315,11 @@ client.on("message", message => {
           .setTimestamp()
 
           .setDescription(
-            "**User**: ```" +
+            "❯ **User**: ```" +
               user.username +
-              "```\n**By**: ```" +
+              "```\n❯ **By**: ```" +
               message.author.username +
-              "```\n**Nickname**: ```" +
+              "```\n**❯ Nickname**: ```" +
               args +
               "``` "
           );
@@ -405,9 +405,9 @@ client.on("message", prof => {
       .setThumbnail(client.user.avatarURL())
       .setColor("#0c0b0b")
       .setTitle("Your Info User")
-      .addField(" **| Your Name**", `<@${prof.author.id}>`)
-      .addField(" **| Your ID**", `${prof.author.id}`)
-      .addField(" **| Create User**", prof.author.createdAt.toLocaleString())
+      .addField(" **❯ Your Name**", `<@${prof.author.id}>`)
+      .addField(" **❯ Your ID**", `${prof.author.id}`)
+      .addField(" **❯ Create User**", prof.author.createdAt.toLocaleString())
       .setFooter(`Requested | ${prof.author.tag}`, prof.author.avatarURL())
       .setTimestamp();
     prof.channel.send(professor);
@@ -449,8 +449,8 @@ client.on("message", async message => {
   if (message.content.toLowerCase() === `${prefix}help mute`) {
     let mute = new Discord.MessageEmbed()
       .setTitle(`Command: Mute `)
-      .addField("Usage", `${prefix}mute @user`)
-      .addField("Information", "Mute Members");
+      .addField("❯ **Usage**", `${prefix}mute @user`)
+      .addField("❯ **Information**", "Mute Members");
     message.channel.send(mute);
   }
 });
@@ -484,8 +484,8 @@ client.on("message", async message => {
   if (message.content.toLowerCase() === `${prefix}help unmute`) {
     let unmute = new Discord.MessageEmbed()
       .setTitle(`Command: unmute `)
-      .addField("Usage", `${prefix}unmute @user`)
-      .addField("Information", "unmute Members");
+      .addField("❯ **Usage**", `${prefix}unmute @user`)
+      .addField("❯ **Information**", "unmute Members");
     message.channel.send(unmute);
   }
 });
@@ -666,8 +666,8 @@ client.on("message", message => {
         `
 
 
- warned by  : ${message.author.username}
- reason     : ${rn}
+ ❯ **warned by  :** ${message.author.username}
+ ❯ **reason     :** ${rn}
 
 
   `
