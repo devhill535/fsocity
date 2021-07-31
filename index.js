@@ -55,7 +55,8 @@ client.on("message", async message => {
      ━────╮╭────━
 **┊Info Commands : {7}** 
 > \`f/user\` ,\`f/botlist\` ,\`f/invite\`
-> \`f/bots\` ,\`f/uptime\` ,\`f/messages\` ,\`f/vote\`
+> \`f/bots\` ,\`f/uptime\` ,\`f/messages\`
+> \`f/vote\`
 ━────╮╭────━
 **┊Admin Commands : {11}**
 > \`f/lock\`
@@ -755,9 +756,9 @@ client.on("message", message => {
 
       .setDescription(`
 •••••
-❯  **Top.gg** : [vote](https://top.gg/bot/803650426570014730/vote)
+❯  **Top.gg**<a:dblspin:393548363879940108> : [vote](https://top.gg/bot/803650426570014730/vote)
 •••••
-❯  **discordbotlist.com** : [vote](https://discordbotlist.com/bots/fsociety/upvote)
+❯  **discordbotlist.com**<:discordbotlist:720681545425223680> : [vote](https://discordbotlist.com/bots/fsociety/upvote)
 •••••`
       )
       .setColor("#FF1177")
