@@ -53,9 +53,9 @@ client.on("message", async message => {
       .setTitle(`All Commands Bot Fsociety: <:emoji_54:861993699633266708>`)
       .setDescription(`
      ━────╮╭────━
-**┊Info Commands : {6}** 
+**┊Info Commands : {7}** 
 > \`f/user\` ,\`f/botlist\` ,\`f/invite\`
-> \`f/bots\` ,\`f/uptime\` ,\`f/messages\`
+> \`f/bots\` ,\`f/uptime\` ,\`f/messages\` ,\`f/vote\`
 ━────╮╭────━
 **┊Admin Commands : {11}**
 > \`f/lock\`
@@ -726,6 +726,49 @@ client.on("message", message => {
       });
   }
 });
+
+
+
+
+client.on("message", message => {
+  if (message.content === prefix + "vote") {
+    
+    if (cooldown.has(message.author.id)) {
+      return message.channel
+        .send(`⏳ | Please wait for 10 second`)
+        .then(m => {
+          m.delete({ timeout: cdtime * 600 });
+        });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    if (!message.channel.guild)
+      return message.channel.send(
+       "** | Sorry This Command Only For Servers .**"
+      );
+    let embed = new Discord.MessageEmbed()
+      
+        .setTitle("Click Here To Join Support Server " + `${client.user.username}` )
+         .setURL("https://discord.gg/robot")
+
+      .setDescription(`
+•••••
+❯  **Top.gg** : [vote](https://top.gg/bot/803650426570014730/vote)
+•••••
+❯  **discordbotlist.com** : [vote](https://discordbotlist.com/bots/fsociety/upvote)
+•••••`
+      )
+      .setColor("#FF1177")
+      .setThumbnail(message.author.avatarURL())
+      .setTimestamp()
+      .setFooter(`${message.author.tag}`, message.author.avatarURL());
+    message.channel.send({ embed });
+  }
+});
+
+
 
 
 
