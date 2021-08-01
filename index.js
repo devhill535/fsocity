@@ -49,7 +49,7 @@ client.on("message", async message => {
     }, cdtime * 1000);
     let help = new Discord.MessageEmbed()
       .setColor("BLACK")
-      .setFooter(message.author.username, message.author.AvatarURL({dynamic: true}))
+      .setFooter(message.author.username, message.author.AvatarURL)
      
       .setThumbnail(message.author.avatarURL())
       .setTitle(`All Commands Bot Fsociety:`)
