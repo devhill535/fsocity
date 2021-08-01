@@ -27,6 +27,69 @@ const cooldown = new Set();
 const cdtime = 10;
 
  const prefix = "f/";
+
+
+client.on("message", async message => {
+  if (message.content.startsWith(prefix+"help2")) {
+   if (!message.channel.guild)
+      return message.channel.send(
+         "**❌ | Sorry This Command Only For Servers **")
+
+    
+    if (cooldown.has(message.author.id)) {
+      return message.channel
+        .send(`<a:emoji_49:861993526560161852> | Please wait for 10 second`)
+        .then(m => {
+          m.delete({ timeout: cdtime * 600 });
+        });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    let help = new Discord.MessageEmbed()
+      .setColor("BLACK")
+      .setFooter(message.author.username, message.author.AvatarURL)
+     
+      .setThumbnail(message.author.avatarURL())
+      .setTitle(`All Commands Bot Fsociety:`)
+      .addField("**┊Info Commands : {7}**", "`usre, botlist, invite, bots, uptime, messages, vote`")
+      .addField("**┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
+      .addField("**┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
+      .addField("**┊Anti bot Commands : {2}**", "`antibot on \n  antibot off`")
+      .addField("**┊Links : **", "[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](http://www.fsocietybot.ml) - [Support](https://discord.gg/PftVmBUr5X)")
+
+
+
+
+
+    message.channel.send(help);
+  }
+});
+client.on("message", message => {
+if(message.content.startsWith(prefix + 'server')) {
+message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
+
+
+}});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help")) {
    if (!message.channel.guild)
