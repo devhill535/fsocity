@@ -56,7 +56,7 @@ client.on("message", async message => {
       .addField("**┊Info Commands : {7}**", "`usre, botlist, invite, bots, uptime, messages, vote`")
       .addField("**┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
       .addField("**┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
-      .addField("**┊Anti bot Commands : {2}**", "`antibot on \n  antibot off`")
+      .addField("**┊Anti bot Commands : {2}**", "`antibot on \nantibot off`")
       .addField("**┊Links : **", "[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](http://www.fsocietybot.ml) - [Support](https://discord.gg/PftVmBUr5X)")
 
 
