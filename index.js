@@ -53,11 +53,11 @@ client.on("message", async message => {
      
       .setThumbnail(message.author.avatarURL())
       .setTitle(`All Commands Bot Fsociety:`)
-      .addField("**┊Info Commands : {7}**", "`\n  usre, botlist, invite, bots, uptime, messages, vote \n`")
-      .addField("**┊Admin Commands : {11}**", "`\n  lock, unlock, lock all, unlock all, clear, ban, kick,\n  nick, mute, unmute, slowmode \n`")
-      .addField("**┊Security Commands : {7}**", "`\n  settings, anti, log, stats, logs \n`")
-      .addField("**┊Anti bot Commands : {2}**", "`\n  antibot on \n  antibot off \n`")
-      .addField("**┊Links : **", "[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](http://www.fsocietybot.ml) - [Support](https://discord.gg/PftVmBUr5X)")
+      .addField("*┊Info Commands : {7}*", "`  usre, botlist, invite, bots, uptime, messages, vote \n`")
+      .addField("*┊Admin Commands : {11}*", "`  lock, unlock, lock all, unlock all, clear, ban, kick,\n  nick, mute, unmute, slowmode \n`")
+      .addField("*┊Security Commands : {7}*", "`  settings, anti, log, stats, logs \n`")
+      .addField("*┊Anti bot Commands : {2}*", "`  antibot on \n  antibot off \n`")
+      .addField("*┊Links : *", "[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](http://www.fsocietybot.ml) - [Support](https://discord.gg/PftVmBUr5X)")
 
 
 
