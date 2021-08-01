@@ -52,7 +52,7 @@ client.on("message", async message => {
       .setFooter(message.author.username, message.author.AvatarURL)
      
       .setThumbnail(message.author.avatarURL())
-      .setTitle(`All Commands Bot Fsociety:`)
+     // .setTitle(`All Commands Bot Fsociety:`)
       .addField("┊ Info Commands : {7}", "`  usre, botlist, invite, bots, uptime, messages, vote \n`")
       .addField("┊ Admin Commands : {11}", "`  lock, unlock, lock all, unlock all, clear, ban, kick,\n  nick, mute, unmute, slowmode \n`")
       .addField("┊ Security Commands : {7}", "`  settings, anti, log, stats, logs \n`")
