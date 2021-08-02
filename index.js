@@ -282,6 +282,13 @@ client.on("message", async message => {
     message.channel.send(unlock);
   }
 });
+
+client.on('message', message => {
+    if (message.content === '<@803650426570014730>') {
+        message.channel.send('Hi There my prefix is `f/` you can use `f/help` for list of my commands');
+    }
+});
+
 //client.on("message", msg => {
 //if (!msg.channel.guild)
  //      return msg.channel.send("");
