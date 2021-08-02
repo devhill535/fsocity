@@ -83,7 +83,7 @@ message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache
 // brdn server xoy messeag bka 
 
 client.on('guildCreate', guild => {
-  guild.systemChannel.send("**Thanks for adding Fsociety**\n\n\n▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n`◦` Use `f/help` to view all of my commands\n`◦` If you need more help, please visit my support server <https://discord.gg/ekQRt7MZYq>\n\n▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n**Security system**\n\nSecurity Bot's protection system will be able to prevent any nuke threats, The bot will limit these actions:\n\nbanning members.\n`-` kicking members\n`-` deleting/creating roles.\n`-` deleting/creating channels.\n`-` adding bots to your server.")
+  guild.systemChannel.send("**Thanks for adding Fsociety**\n\n\n▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n`◦` Use `f/help` to view all of my commands\n`◦` If you need more help, please visit my support server <https://discord.gg/ekQRt7MZYq>\n\n▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n**Security system**\n\nSecurity Bot's protection system will be able to prevent any nuke threats, The bot will limit these actions:\n\n`-` banning members.\n`-` kicking members\n`-` deleting/creating roles.\n`-` deleting/creating channels.\n`-` adding bots to your server.")
 });
 
 // brdn server xoy messeag bka 
