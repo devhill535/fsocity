@@ -307,9 +307,9 @@ if (!msg.channel.guild)
  msg.channel.send(here);
   
 
- // }
+  }
   
-//});
+});
 // ======== { • anti here • }======== //
 //client.on("message", msg => {
  //if (!msg.channel.guild)
