@@ -282,61 +282,61 @@ client.on("message", async message => {
     message.channel.send(unlock);
   }
 });
-client.on("message", msg => {
- if (!msg.channel.guild)
-       return msg.channel.send("");
-  if (msg.author.bot) return;
-  if (msg.content.includes("@everyone")) {
-    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
-    if (!msg.channel.guild) return;
-    msg.delete();
- const here = new Discord.MessageEmbed()
-      .setColor("#00000")
-      .setDescription(
-        `❌ | **Deleted Message**
-❯ **Channel Name** : <#${msg.channel.id}>
-❯ **Message By** : <@${msg.author.id}>
-❯ **Reason** : Send Everyone : ❌
-`
-      )
-      .setThumbnail(msg.author.avatarURL())
-       .setTimestamp()     
- .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
-          .setTimestamp()
+//client.on("message", msg => {
+// if (!msg.channel.guild)
+//       return msg.channel.send("");
+//  if (msg.author.bot) return;
+ // if (msg.content.includes("@everyone")) {
+//    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
+//    if (!msg.channel.guild) return;
+//    msg.delete();
+// const here = new Discord.MessageEmbed()
+ //     .setColor("#00000")
+  //    .setDescription(
+  //      `❌ | **Deleted Message**
+//❯ **Channel Name** : <#${msg.channel.id}>
+//❯ **Message By** : <@${msg.author.id}>
+//❯ **Reason** : Send Everyone : ❌
+// `
+ //     )
+ //     .setThumbnail(msg.author.avatarURL())
+//       .setTimestamp()     
+// .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
+    //      .setTimestamp()
 
- msg.channel.send(here);
+ //msg.channel.send(here);
   
 
-  }
+ // }
   
-});
+//});
 // ======== { • anti here • }======== //
-client.on("message", msg => {
- if (!msg.channel.guild)
-       return msg.channel.send("");
-  if (msg.author.bot) return;
-  if (msg.content.includes("@here")) {
-    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
-    if (!msg.channel.guild) return;
-    msg.delete();
-    const here = new Discord.MessageEmbed()
-      .setColor("#00000")
-      .setDescription(
-        `❌ | **Deleted Message**
-❯ **Channel Name** : <#${msg.channel.id}>
-❯ **Message By** : <@${msg.author.id}>
-❯ **Reason** : Send Here : ❌
-`
-      )
-      .setThumbnail(msg.author.avatarURL())
-      .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
-         .setTimestamp()
+//client.on("message", msg => {
+ //if (!msg.channel.guild)
+//       return msg.channel.send("");
+//  if (msg.author.bot) return;
+//  if (msg.content.includes("@here")) {
+//    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
+//    if (!msg.channel.guild) return;
+//    msg.delete();
+ //   const here = new Discord.MessageEmbed()
+//      .setColor("#00000")
+ //     .setDescription(
+//        `❌ | **Deleted Message**
+//❯ **Channel Name** : <#${msg.channel.id}>
+//❯ **Message By** : <@${msg.author.id}>
+//❯ **Reason** : Send Here : ❌
+// `
+//      )
+ //     .setThumbnail(msg.author.avatarURL())
+ //     .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
+  //       .setTimestamp()
+//
+//    msg.channel.send(here);
 
-    msg.channel.send(here);
 
-
-  }
-});
+//  }
+// });
     
  
 
