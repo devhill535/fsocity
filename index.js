@@ -304,7 +304,7 @@ if (!msg.channel.guild)
 .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
           .setTimestamp()
 
- msg.channel.send(here).then(msg => msg.delete(9000)).catch(console.error);
+ msg.channel.send(here);
   
 
  // }
