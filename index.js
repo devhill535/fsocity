@@ -828,9 +828,9 @@ client.on("message", message => {
 
       .setDescription(`
 •••••
-❯  **Top.gg**<a:dblspin:393548363879940108> : [vote](https://top.gg/bot/803650426570014730/vote)
+❯  **Top.gg** : [vote](https://top.gg/bot/803650426570014730/vote)
 •••••
-❯  **discordbotlist.com**<:discordbotlist:720681545425223680> : [vote](https://discordbotlist.com/bots/fsociety/upvote)
+❯  **discordbotlist.com** : [vote](https://discordbotlist.com/bots/fsociety/upvote)
 •••••`
       )
       .setColor("#FF1177")
