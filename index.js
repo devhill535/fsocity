@@ -847,4 +847,4 @@ client.on("message", message => {
 
 
 
-client.login("ODAzNjUwNDI2NTcwMDE0NzMw.YBA3yA.x9WNoXxNVfTLPbmirow1W-Pyp6A");
+client.login("ODAzNjUwNDI2NTcwMDE0NzMw.YBA3yA.TV9srPlQ9_YdofpZWZuHzZ4J1AY");
