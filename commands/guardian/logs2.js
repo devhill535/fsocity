@@ -1,14 +1,12 @@
 const { Command } = require('discord-akairo');
 
-
-class LoggingCommand extends Command {
+class RecentCommand extends Command {
     constructor() {
         super('logs2', {
-            aliases: ['loggingchannel', 'logging', 'logs2'],
+            aliases: ['logs2'],
             args: [
                 {
-                    id: 'channel',
-                    type: 'channel'
+                    id: 'ID'
                 }
             ],
             channel: 'guild'
@@ -32,17 +30,8 @@ class LoggingCommand extends Command {
                 )
             );
 
-        // Verify Input
-        if (!args.channel) {
-            const loggingChannel = message.guild.resolveChannel(
-                message.guild.get(`loggingChannelID`)
-            );
-
-            return message.channel.send(
-              
-              const embed = this.client.util
-            .embed()
-            .setColor("#00000")
+        return message.channel.send(
+            embed.setColor("#00000")
             .setTitle(
                 `Recent Actions in ${message.guild.name} ${
                     args.ID
@@ -74,8 +63,4 @@ class LoggingCommand extends Command {
     }
 }
 
-              
-              
-
-
-module.exports = LoggingCommand;
+module.exports = RecentCommand;
