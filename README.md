@@ -1,4 +1,4 @@
-## Guardian
+## Guardian DJ
 
 Guardian allows server owners to set strict limits on administration actions. These actions include: bans, kicks, channel creations/deletions, and role creations/deletions. Once someone meets any of these limits, their Discord permissions are automatically revoked via removing all of their roles.
 
