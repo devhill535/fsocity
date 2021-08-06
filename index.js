@@ -838,9 +838,24 @@ client.on("message", message => {
 
 
 
-client.on('message', message => {
-  if (message.author !== null && message.author.bot) return;
-  if (message.toString().startsWith('f/help3')) {
+client.on("message", message => {
+  if (message.content === prefix + "h1") {
+    
+    if (cooldown.has(message.author.id)) {
+      return message.channel
+        .send(`⏳ | Please wait for 10 second`)
+        .then(m => {
+          m.delete({ timeout: cdtime * 600 });
+        });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    if (!message.channel.guild)
+      return message.channel.send(
+       "** | Sorry This Command Only For Servers .**"
+      );
     const helpPi = new Discord.MessageEmbed()
       .setTitle('Admin Help commands')
       .setColor('0004ff')
