@@ -838,60 +838,8 @@ client.on("message", message => {
 
 
 
-client.on("message", message => {
-  if (message.content === prefix + "h1") {
-    
-    if (cooldown.has(message.author.id)) {
-      return message.channel
-        .send(`⏳ | Please wait for 10 second`)
-        .then(m => {
-          m.delete({ timeout: cdtime * 600 });
-        });
-    }
-    cooldown.add(message.author.id);
-    setTimeout(() => {
-      cooldown.delete(message.author.id);
-    }, cdtime * 1000);
-    if (!message.channel.guild)
-      return message.channel.send(
-       "** | Sorry This Command Only For Servers .**"
-      );
-    const helpPi = new Discord.MessageEmbed()
-      .setTitle('Admin Help commands')
-      .setColor('0004ff')
-      .addField("`lock` lock the channel ", "`unlock` unlock the channel")
-      .addField("`lock all` lock all channeles", "`unlock all` unlock all channeles")
-      .addField("`clear` clearthe message is in channel 1-100", "`ban` ban a user")
-      .addField("`kick` kick a user ", "`nick` change a nickname for a user")
-      .addField("`mute` mute a user from text", "`unmute` numute a user")
-      .addField("`slowmode` change a slowmode for a channel", "hich")
-      .setDescription('This is the help menu for available commands. Here is the table of contents:\n> 1 - Commands\n> 2 - More info.')
-    const helpP1 = new Discord.MessageEmbed()
-      .setTitle('Security Help commands')
-      .setColor('0004ff')
-      .setDescription('Command A\nCommand B')
-    const helpP2 = new Discord.MessageEmbed()
-      .setTitle('Help and commands')
-      .setColor('0004ff')
-      .setDescription('More info.')
-    message.channel.send(helpPi).then(sentMessage => {
-      sentMessage.react('ℹ️')
-      sentMessage.react('1️⃣')
-      sentMessage.react('2️⃣')
-      client.on('messageReactionAdd', reaction => {
-        if (reaction == '1️⃣') {
-          sentMessage.edit(helpP1)
-        }
-        else if (reaction == '2️⃣') {
-          sentMessage.edit(helpP2)
-        }
-        else if (reaction == 'ℹ️') {
-          sentMessage.edit(helpPi)
-        }
-      })
-    })
-  }
-});
+
+
 
 
 
