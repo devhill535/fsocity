@@ -66,12 +66,7 @@ client.on("message", async message => {
     message.channel.send(help);
   }
 });
-client.on("message", message => {
-if(message.content.startsWith(prefix + 'server121')) {
-message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
 
-
-}});
 
 
 
