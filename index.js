@@ -839,47 +839,7 @@ client.on("message", message => {
 
 
 
-client.on("message", message => {
-  if (message.content === prefix + "allbots") {
-    
-    if (cooldown.has(message.author.id)) {
-      return message.channel
-        .send(`⏳ | Please wait for 10 second`)
-        .then(m => {
-          m.delete({ timeout: cdtime * 600 });
-        });
-    }
-    cooldown.add(message.author.id);
-    setTimeout(() => {
-      cooldown.delete(message.author.id);
-    }, cdtime * 1000);
-    if (!message.channel.guild)
-      return message.channel.send(
-       "** | Sorry This Command Only For Servers .**"
-      );
-let i = 1;
-    
-    const botssize = message.guild.members.cache
-      .filter(m => m.user.bot)
-      .map(m => `${i++} - <@${m.id}>`);
-    
-    
-    const embed = new Discord.MessageEmbed()
-      .setAuthor(message.author.tag, message.author.avatarURL())
-      .setColor("BLACK")
-      .setDescription(
-        `**${
-          message.guild.members.cache.filter(m => m.user.bot).size
-        } You were found on this server**
-${botssize.join("\n\━\━\━\━\━\━\━\━\━\━\━\━\━\━\━\━\━\━\ \n")}`
-      )
-      .setFooter(client.user.username, client.user.avatarURL())
-      .setTimestamp();
-    
-    
-    message.channel.send(embed);
-  }
-}
+
 
 
 
