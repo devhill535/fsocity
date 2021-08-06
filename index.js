@@ -67,7 +67,7 @@ client.on("message", async message => {
   }
 });
 client.on("message", message => {
-if(message.content.startsWith(prefix + 'server')) {
+if(message.content.startsWith(prefix + 'server121')) {
 message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
 
 
