@@ -287,7 +287,7 @@ client.on('message', message => {
 });
 
 
-```
+
 client.on("message", msg => {
   if (!msg.channel.guild) return msg.channel.send("");
   //if (msg.author.bot) return;
@@ -296,12 +296,18 @@ client.on("message", msg => {
     msg.delete();
     const here = new MessageEmbed()
       .setColor("#00000")
-      .setDescription("❌ | **Deleted Message**\n\n ❯ **Channel Name** : <#${msg.channel.id}> ❯\n**Message By** : <@${msg.author.id}> ❯\n**Reason** : Send Everyone : ❌")
+      
       .setThumbnail(msg.author.avatarURL())
       .setTimestamp()
       .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
       .setTimestamp();
-
+      .setDescription(
+        `❌ | **Deleted Message**
+ ❯ **Channel Name** : <#${msg.channel.id}>
+ ❯ **Message By** : <@${msg.author.id}>
+ ❯ **Reason** : Send Everyone : ❌
+ `
+      )
     msg.channel.send(here).then(message => {
       setTimeout(() =>{
       message.delete()
@@ -309,7 +315,7 @@ client.on("message", msg => {
     });
   }
 });
-```
+
 
 
  //client.on("message", msg => {
