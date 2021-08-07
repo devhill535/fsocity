@@ -308,7 +308,9 @@ client.on('message', message => {
 //.setFooter(`${msg.author.tag}`, msg.author.avatarURL())
 //          .setTimestamp()
 
-// msg.channel.send(here);
+// msg.channel.send(here).then(msg => msg.delete({ timeout: 500 }))
+})
+
  // 
 //
 //  }
