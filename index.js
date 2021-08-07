@@ -286,6 +286,32 @@ client.on('message', message => {
     }
 });
 
+
+```
+client.on("message", msg => {
+  if (!msg.channel.guild) return msg.channel.send("");
+  //if (msg.author.bot) return;
+  if (msg.content.includes("@everyone")) {
+  if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
+    msg.delete();
+    const here = new MessageEmbed()
+      .setColor("#00000")
+      .setDescription("❌ | **Deleted Message**\n\n ❯ **Channel Name** : <#${msg.channel.id}> ❯\n**Message By** : <@${msg.author.id}> ❯\n**Reason** : Send Everyone : ❌")
+      .setThumbnail(msg.author.avatarURL())
+      .setTimestamp()
+      .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
+      .setTimestamp();
+
+    msg.channel.send(here).then(message => {
+      setTimeout(() =>{
+      message.delete()
+        },2000)
+    });
+  }
+});
+```
+
+
  //client.on("message", msg => {
 //if (!msg.channel.guild)
  //      return msg.channel.send("");
