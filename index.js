@@ -289,7 +289,8 @@ client.on('message', message => {
 
 
 client.on("message", msg => {
-  if (!msg.channel.guild) return msg.channel.send("");
+  if (!msg.channel.guild)
+      return msg.channel.send("");
   if (msg.author.bot) return;
   if (msg.content.includes("@everyone")) {
   if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
