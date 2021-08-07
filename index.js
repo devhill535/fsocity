@@ -308,9 +308,9 @@ if (!msg.channel.guild)
 .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
           .setTimestamp()
 
-msg.channel.send(here).then(message => {
-if(message.deletable) message.delete({timeout : 10000})
+msg.channel.send(here).then(msg => msg.delete({ timeout: 500 }))
 })
+
 
 
   
