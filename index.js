@@ -33,37 +33,7 @@ const cdtime = 10;
 
 client.on('message', message => {
     if (message.author !== null && message.author.bot) return;
-    if (message.content.startsWith(prefix+"2")) {
-        const helpPi = new Discord.MessageEmbed()
-        .setTitle('Help and commands')
-        .setColor('0004ff')
-        .setDescription('This is the help menu for available commands. Here is the table of contents:\n> 1 - Commands\n> 2 - More info.')
-        const helpP1 = new Discord.MessageEmbed()
-        .setTitle('Help and commands')
-        .setColor('0004ff')
-        .setDescription('Command A\nCommand B')
-        const helpP2 = new Discord.MessageEmbed()
-        .setTitle('Help and commands')
-        .setColor('0004ff')
-        .setDescription('More info.')
-        message.channel.send(helpPi).then(sentMessage => {
-            sentMessage.react('ℹ️')
-            sentMessage.react('1️⃣')
-            sentMessage.react('<a:settings:856623683572989952>')
-            client.on('messageReactionAdd', reaction => {
-                if (reaction == '1️⃣') {
-                    sentMessage.edit(helpP1)
-                }
-                else if (reaction == '<a:settings:856623683572989952>') {
-                    sentMessage.edit(helpP2)
-                }
-                else if (reaction == 'ℹ️') {
-                    sentMessage.edit(helpPi)
-                }
-            })
-        })
-    }
-});
+
 
 
 
