@@ -33,7 +33,7 @@ const cdtime = 10;
 
 client.on('message', message => {
     if (message.author !== null && message.author.bot) return;
-    if (message.content.startsWith(prefix+"help2")) {
+    if (message.content.startsWith(prefix+"2")) {
         const helpPi = new Discord.MessageEmbed()
         .setTitle('Help and commands')
         .setColor('0004ff')
