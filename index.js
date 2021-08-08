@@ -49,12 +49,12 @@ client.on('message', message => {
         message.channel.send(helpPi).then(sentMessage => {
             sentMessage.react('ℹ️')
             sentMessage.react('1️⃣')
-            sentMessage.react('2️⃣')
+            sentMessage.react('<a:settings:856623683572989952>')
             client.on('messageReactionAdd', reaction => {
                 if (reaction == '1️⃣') {
                     sentMessage.edit(helpP1)
                 }
-                else if (reaction == '2️⃣') {
+                else if (reaction == '<a:settings:856623683572989952>') {
                     sentMessage.edit(helpP2)
                 }
                 else if (reaction == 'ℹ️') {
