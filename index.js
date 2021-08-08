@@ -31,8 +31,6 @@ const cdtime = 10;
 
 
 
-client.on('message', message => {
-    if (message.author !== null && message.author.bot) return;
 
 
 
