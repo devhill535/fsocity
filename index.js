@@ -55,20 +55,14 @@ client.on("message", async message => {
      
       .setThumbnail(message.author.avatarURL())
       .setTitle(`All Commands Bot Fsociety:`)
-      .addField("┊Info Commands :","`f/help info` display all info command's")
-      .addField("┊Admin Commands :","`f/help admin`display all admin command's")
-      .addField("┊Security Commands","`f/help Security`display all Security command's")
+      .addField("┊Info Commands :","```f/help info``` display all info command's")
+      .addField("┊Admin Commands :","```f/help admin``` display all admin command's")
+      .addField("┊Security Commands","```f/help Security``` display all Security command's")
       
 
     message.channel.send(help);
   }
 });
-client.on("message", message => {
-if(message.content.startsWith(prefix + 'server')) {
-message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
-
-
-}});
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help info")) {
    if (!message.channel.guild)
@@ -108,12 +102,6 @@ client.on("message", async message => {
     message.channel.send(help);
   }
 });
-client.on("message", message => {
-if(message.content.startsWith(prefix + 'server')) {
-message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
-
-
-}});
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help admin")) {
    if (!message.channel.guild)
@@ -160,12 +148,6 @@ client.on("message", async message => {
     message.channel.send(help);
   }
 });
-client.on("message", message => {
-if(message.content.startsWith(prefix + 'server')) {
-message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
-
-
-}});
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help Security")) {
    if (!message.channel.guild)
