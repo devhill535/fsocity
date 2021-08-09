@@ -18,10 +18,7 @@ client.on("ready", async () => {
 const Discord = require('discord.js')
     const { RichEmbed  } = require('discord.js')
    
-    client.on('ready', () => {
-  let channel = client.channels.get('848398797729431573');
-  channel.join()
-});
+    
     
 
 
