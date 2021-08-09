@@ -7,6 +7,7 @@ client.on("ready", async () => {
   console.log(`${client.user.username} Ready .`);
   console.log(`${client.guilds.cache.size} Servers .`);
   console.log(`${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} Users .`);
+  const channel = client.channels.get("848398797729431573");
  client.user.setStatus("invisible")
   client.user.setActivity("f/help |Fsociety Is Here", {
     type: "PLAYING"
