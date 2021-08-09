@@ -27,7 +27,7 @@ client.on("ready", () => {
   let botStatus = [
     `f/help |Fsociety Is Here`,
     `f/help |Security is there`,
-    `f/help |Fsociety Is Here`
+    `f/help |discord.gg/robot`
   ]
   
   setInterval(function() {
