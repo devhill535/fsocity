@@ -3,16 +3,39 @@ require("events").EventEmitter.defaultMaxListeners = 200;
 ;
 const GuardianClient = require('./core/client.js');
 const client = new GuardianClient();
-client.on("ready", async () => {
-  console.log(`${client.user.username} Ready .`);
-  console.log(`${client.guilds.cache.size} Servers .`);
-  console.log(`${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} Users .`);
- client.user.setStatus("invisible")
-  client.user.setActivity("f/help |Fsociety Is Here", {
-    type: "PLAYING"
-  });
-});
+//client.on("ready", async () => {
+//  console.log(`${client.user.username} Ready .`);
+  //console.log(`${client.guilds.cache.size} Servers .`);
+ // console.log(`${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)} Users .`);
+// client.user.setStatus("invisible")
+//  client.user.setActivity("f/help |Fsociety Is Here", {
+  //  type: "PLAYING"
+ // });
+//});
+client.on("ready", () => {
+  console.log(`Hello ${client.user.username} is now online!`);
 
+  let channel = client.channels.cache.get("848398797729431573");
+  if (!channel) return console.error("The channel does not exist!");
+  setInterval(function() {
+
+  channel.join()
+  .then(connection => console.log('Connected'))
+  .catch(console.error);
+}, 30000)
+
+  let botStatus = [
+    `f/help |Fsociety Is Here`,
+    `f/help |Security is there`,
+    `f/help |Fsociety Is Here`
+  ]
+  
+  setInterval(function() {
+    let status = botStatus[Math.floor(Math.random() * botStatus.length)];
+    client.user.setActivity(status, {type: "PLAYING"});
+  
+    }, 5000)
+  });
 
 
 const Discord = require('discord.js')
