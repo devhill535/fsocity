@@ -256,31 +256,12 @@ client.on('message', message => {
 
 client.on("message", msg => {
   if (!msg.channel.guild) return msg.channel.send("");
- // if (msg.author.bot) return;
+  if (msg.author.bot) return;
   if (msg.content.includes("@everyone")) {
 if(msg.member.hasPermission("MANAGE_MESSAGES")) return;
     msg.delete();
-    const here = new Discord.MessageEmbed()
-      .setColor("#00000")
-      .setDescription(
-        `❌ | **Deleted Message**
- ❯ **Channel Name** : <#${msg.channel.id}>
- ❯ **Message By** : <@${msg.author.id}>
- ❯ **Reason** : Send Everyone : ❌
- `
-      )
-      .setThumbnail(msg.author.avatarURL())
-      .setTimestamp()
-      .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
-      .setTimestamp();
-
-    msg.channel.send(here).then(message => {
-      setTimeout(() =>{
-      message.delete()
-        },2000)
-    });
-  }
-});
+    console.log(colors.red(`Removed ${message.author.username}'s Message as it had a forbidden word in it.`));
+}
 
 
 
@@ -311,8 +292,7 @@ if(msg.member.hasPermission("MANAGE_MESSAGES")) return;
 
 //  }
 // });
-    
- 
+  
 
 client.on("message", message => {
   if (message.content.startsWith(prefix + "nick")) {
