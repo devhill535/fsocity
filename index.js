@@ -9,7 +9,7 @@ client.on("ready", () => {
 •••••
 ❯ **Prefix** : f/
 •••••
-❯ **Status** : online            
+❯ **Status** : online\n        
 •••••
 ❯  **Servers** : ${client.guilds.cache.size}
 •••••
