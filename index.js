@@ -17,7 +17,7 @@ client.on("ready", () => {
 •••••
 ❯  **Channels** : ${client.channels.cache.size}
 •••••`
-     );
+     ).then(msg=> { msg.react("✨") }).catch();
 
   let channel = client.channels.cache.get("848398797729431573");
   if (!channel) return console.error("The channel does not exist!");
