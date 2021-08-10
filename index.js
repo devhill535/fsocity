@@ -6,6 +6,7 @@ const client = new GuardianClient();
 client.on("ready", () => {
   console.log(`Hello ${client.user.username} is now online!`);
   client.channels.cache.get("874463630832336956").send(`
+  𝖥𝗌𝗈𝖼𝗂𝖾𝗍𝗒 𝗌𝗍𝖺𝗍𝗎𝗌 🟢 
  •••••
 ❯  **Servers** : ${client.guilds.cache.size}
 •••••
