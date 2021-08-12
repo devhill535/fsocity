@@ -43,6 +43,7 @@ client.on("ready", () => {
 
 
 const Discord = require('discord.js')
+require('discord-reply');
     const { RichEmbed  } = require('discord.js')
    
     
