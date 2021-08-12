@@ -128,7 +128,7 @@ client.on("message", async message => {
 [invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](http://www.fsocietybot.ml) - [Support](https://discord.gg/PftVmBUr5X)
 `);
 
-    message.channel.send(help);
+    message.lineReplyNoMentio(help);
   }
 });
 client.on("message", message => {
