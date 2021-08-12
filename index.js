@@ -275,10 +275,10 @@ client.on('message', message => {
 });
 
 
-
+// ======== { • anti everyone • }======== //
 client.on("message", msg => {
   if (!msg.channel.guild) return msg.channel.send("");
-  // if (msg.author.bot) return;
+   if (msg.author.bot) return;
   if (msg.content.includes("@everyone")) {
     if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
     msg.delete();
@@ -301,44 +301,34 @@ client.on("message", msg => {
     });
   }
 });
-
-
-
-
-
-
-
-
-
+// ======== { • anti everyone • }======== //
 // ======== { • anti here • }======== //
-//client.on("message", msg => {
- //if (!msg.channel.guild)
-//       return msg.channel.send("");
-//  if (msg.author.bot) return;
-//  if (msg.content.includes("@here")) {
-//    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
-//    if (!msg.channel.guild) return;
-//    msg.delete();
- //   const here = new Discord.MessageEmbed()
-//      .setColor("#00000")
- //     .setDescription(
-//        `❌ | **Deleted Message**
-//❯ **Channel Name** : <#${msg.channel.id}>
-//❯ **Message By** : <@${msg.author.id}>
-//❯ **Reason** : Send Here : ❌
-// `
-//      )
- //     .setThumbnail(msg.author.avatarURL())
- //     .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
-  //       .setTimestamp()
-//
-//    msg.channel.send(here);
+client.on("message", msg => {
+  if (!msg.channel.guild) return msg.channel.send("");
+   if (msg.author.bot) return;
+  if (msg.content.includes("@here")) {
+    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
+    msg.delete();
+    const here = new Discord.MessageEmbed()
+      .setColor("#00000")
+      .setDescription(
+        `❌ | **Deleted Message**
+❯ **Channel Name** : <#${msg.channel.id}>
+❯ **Message By** : <@${msg.author.id}>
+❯ **Reason** : Send Here : ❌
+ `
+     )
+      .setThumbnail(msg.author.avatarURL())
+      .setTimestamp()
+      .setFooter(`${msg.author.tag}`, msg.author.avatarURL())
+      .setTimestamp();
 
-
-//  }
-// });
-  
-
+    msg.channel.send(here).then(m => {
+          m.delete({ timeout: cdtime * 600 })
+    });
+  }
+});
+// ======== { • anti here • }======== //
 client.on("message", message => {
   if (message.content.startsWith(prefix + "nick")) {
     if (!message.guild.member(message.author).hasPermission("MANAGE_NICKNAMES"))
