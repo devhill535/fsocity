@@ -42,9 +42,9 @@ client.on("ready", () => {
   });
 
 
-const Discord = require('discord.js')
+const Discord = require('discord.js');
 require('discord-reply');
-    const { RichEmbed  } = require('discord.js')
+const { RichEmbed  } = require('discord.js')
    
     
     
