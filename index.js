@@ -276,7 +276,20 @@ client.on('message', message => {
 
 
 
-
+client.on("message", msg => {
+if (!msg.channel.guild)
+       return msg.channel.send("");
+  if (msg.author.bot) return;
+   if (msg.content.includes("@here")) {
+    if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
+    if (!msg.channel.guild) return;
+   msg.delete();
+   message.channel.send(`<a:emoji_49:861993526560161852> | u can not use **here**`)
+       .then(m => {
+         m.delete({ timeout: cdtime * 600 })
+       });
+          }
+          });
 
 
 
