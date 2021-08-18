@@ -808,6 +808,8 @@ client.on("message", message => {
 
       .setDescription(`
 •••••
+❯  **dblstatistics** ;   [dblstatistics](https://dblstatistics.com/bot/803650426570014730)
+•••••
 ❯  **Top.gg** : [vote](https://top.gg/bot/803650426570014730/vote)
 •••••
 ❯  **discordbotlist.com** : [vote](https://discordbotlist.com/bots/fsociety/upvote)
