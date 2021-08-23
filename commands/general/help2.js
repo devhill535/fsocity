@@ -10,7 +10,7 @@ module.exports = {
   async execute(client, message, args) {
 
     const helpEmbed = new Discord.MessageEmbed()
-      .setColor(color)
+      .setColor("#de873")
       .setAuthor(`${client.user.username} Discord Bot\n`)
       .setDescription('• 📍 Prefix: ``' + prefix + '``\n' +
         `• 🔧 Developer: ${dev}\n\n⚙️ - **Panel**\n👮 - **Moderation**\n❔ - **Other**`);
