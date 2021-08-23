@@ -1,7 +1,5 @@
 const { Command } = require('discord-akairo');
-const { MessageEmbed } = require('discord.js');
-const { formatName } = require('../../Utilities/Functions');
-const color = require('../../Storage/Colors.json');
+
 
 const emotes = {
                 "Developer":"⚙️",
