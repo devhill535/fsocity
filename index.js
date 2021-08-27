@@ -135,7 +135,7 @@ client.on("message", async message => {
 
 
 
-}});
+
 client.on("message", async message => {
   if (message.content.toLowerCase() === prefix + "invite") {
      if (!message.channel.guild)
