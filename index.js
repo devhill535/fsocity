@@ -16,7 +16,7 @@ client.on("ready", () => {
 •••••
 ❯  **Channels** : ${client.channels.cache.size}
 •••••`
-     ).then(msg=> { msg.react("<a:emoji_80:825885322721886208>") }).catch(); */
+     ).then(msg=> { msg.react("<a:emoji_80:825885322721886208>") }).catch(); 
 
   let channel = client.channels.cache.get("848398797729431573");
   if (!channel) return console.error("The channel does not exist!"); 
@@ -25,7 +25,7 @@ client.on("ready", () => {
   channel.join()
   .then(connection => console.log('Connected'))
   .catch(console.error);
-}, 30000)
+}, 30000) */
 
   let botStatus = [
     `f/help |Fsociety Is Here`,
