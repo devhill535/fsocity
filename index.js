@@ -100,12 +100,12 @@ client.on("message", async message => {
       .setThumbnail(message.author.avatarURL())
       .setTitle(`All Commands Bot Fsociety: <:emoji_54:861993699633266708>`)
       .setDescription(`
-     ━────╮╭────━
+●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬●
 **┊Info Commands : {7}** 
 > \`f/user\` ,\`f/botlist\` ,\`f/invite\`
 > \`f/bots\` ,\`f/uptime\` ,\`f/messages\`
 > \`f/vote\`
-━────╮╭────━
+●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬●
 **┊Admin Commands : {11}**
 > \`f/lock\`
 > \`f/unlock\`
@@ -118,7 +118,7 @@ client.on("message", async message => {
 > \`f/mute\` : __@User ,Or Id__
 > \`f/unmute\`: __@User ,Or Id__
 > \`f/slowmode\`: __Set the channel__
-━────╮╭────━
+●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬●
 **┊Security Commands : {7}**
 > \`f/settings\` Or \`f/anti\`
 > \`f/log\` Or : __Set {#channel}__
