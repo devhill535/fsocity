@@ -1,3 +1,4 @@
+require('discord-reply');
 require('dotenv').config();
 require("events").EventEmitter.defaultMaxListeners = 200;
 ;
