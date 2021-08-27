@@ -95,7 +95,7 @@ client.on("message", async message => {
      
       .setThumbnail(message.author.avatarURL())
       .setTitle(`All Commands Bot Fsociety:`)
-      .setDescription("Here is the list of commands!\nneed more help? Come join your[guild](https://discord.gg/PftVmBUr5X)")
+      .setDescription(`Here is the list of commands!\nneed more help? Come join your[guild](https://discord.gg/PftVmBUr5X)`)
       .addField("**┊Info Commands : {7}**", "`usre, botlist, invite, bots, uptime, messages, vote`")
       .addField("**┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
       .addField("**┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
