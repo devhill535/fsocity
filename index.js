@@ -2,43 +2,17 @@ require('dotenv').config();
 require("events").EventEmitter.defaultMaxListeners = 200;
 const GuardianClient = require('./core/client.js');
 const client = new GuardianClient();
-client.on("ready", () => {
-  console.log(`Hello ${client.user.username} is now online!`);
- /* client.channels.cache.get("874463630832336956").send(`
-•••••
-❯ **Prefix** : f/
-•••••
-❯ **Status** : online :green_circle:\n        
-•••••
-❯  **Servers** : ${client.guilds.cache.size}
-•••••
-❯  **Users** : ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
-•••••
-❯  **Channels** : ${client.channels.cache.size}
-•••••`
-     ).then(msg=> { msg.react("<a:emoji_80:825885322721886208>") }).catch(); 
+client.on('ready', () => {
+    setInterval(async ()=>{
+        let textList = ['f/help |Fsociety Is Here','f/help |Security is there','f/help |discord.gg/robo']
+        var text = textList[Math.floor(Math.random() * textList.length)];
+        client.user.setActivity(text , { type: 'WATCHING' })
+    },60000) // milliseconds
+});
 
-  let channel = client.channels.cache.get("848398797729431573");
-  if (!channel) return console.error("The channel does not exist!"); 
-  setInterval(function() {
 
-  channel.join()
-  .then(connection => console.log('Connected'))
-  .catch(console.error);
-}, 30000) */
-
-  let botStatus = [
-    `f/help |Fsociety Is Here`,
-    `f/help |Security is there`,
-    `f/help |discord.gg/robot`
-  ]
   
-  setInterval(function() {
-    let status = botStatus[Math.floor(Math.random() * botStatus.length)];
-    client.user.setActivity(status, {type: "PLAYING"});
   
-    }, 5000)
-  });
 
 
 const Discord = require('discord.js')
