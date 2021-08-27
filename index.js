@@ -3,12 +3,10 @@ require("events").EventEmitter.defaultMaxListeners = 200;
 const GuardianClient = require('./core/client.js');
 const client = new GuardianClient();
 client.on('ready', () => {
-    setInterval(async ()=>{
-        let textList = ['f/help |Fsociety Is Here','f/help |Security is there','f/help |discord.gg/robo']
-        var text = textList[Math.floor(Math.random() * textList.length)];
-        client.user.setActivity(text , { type: 'WATCHING' })
-    },60000) // milliseconds
+        console.log(`[-------------- The bot && is ready! --------------]`)
+await client.user.setActivity(`f/help |Security is there`)
 });
+
 
 
   
