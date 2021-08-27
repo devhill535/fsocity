@@ -15,7 +15,7 @@ class RecentCommand extends Command {
 
     async exec(message, args) {
         if (!message.member.hasPermission('ADMINISTRATOR'))
-            return message.channel.send('***Sorry**, invalid permissions.*');
+            return message.channel.send('***Sorry**, \n*You dont have the **`ADMINISTRATOR`** permission to access that command.*');
         const embed = this.client.util
             .embed()
             .setColor("#00000")
