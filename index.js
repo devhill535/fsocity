@@ -16,10 +16,10 @@ client.on("ready", () => {
 •••••
 ❯  **Channels** : ${client.channels.cache.size}
 •••••`
-     ).then(msg=> { msg.react("<a:emoji_80:825885322721886208>") }).catch(); 
+     ).then(msg=> { msg.react("<a:emoji_80:825885322721886208>") }).catch(); */
 
   let channel = client.channels.cache.get("848398797729431573");
-  if (!channel) return console.error("The channel does not exist!"); */
+  if (!channel) return console.error("The channel does not exist!"); 
   setInterval(function() {
 
   channel.join()
@@ -95,7 +95,7 @@ client.on("message", async message => {
      
       .setThumbnail(message.author.avatarURL())
       
-      .setDescription(`Here is the list of commands!\nneed more help? Come join our [guild](https://discord.gg/PftVmBUr5X)`)
+      .setDescription("Here is the list of commands!\nneed more help? Come join our [guild](https://discord.gg/PftVmBUr5X)")
       .addField("**┊Info Commands : {7}**", "`usre, botlist, invite, bots, uptime, messages, vote`")
       .addField("**┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
       .addField("**┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
