@@ -4,7 +4,7 @@ const GuardianClient = require('./core/client.js');
 const client = new GuardianClient();
 client.on("ready", () => {
   console.log(`Hello ${client.user.username} is now online!`);
-  client.channels.cache.get("874463630832336956").send(`
+ /* client.channels.cache.get("874463630832336956").send(`
 •••••
 ❯ **Prefix** : f/
 •••••
@@ -16,10 +16,10 @@ client.on("ready", () => {
 •••••
 ❯  **Channels** : ${client.channels.cache.size}
 •••••`
-     ).then(msg=> { msg.react("<a:emoji_80:825885322721886208>") }).catch();
+     ).then(msg=> { msg.react("<a:emoji_80:825885322721886208>") }).catch(); 
 
   let channel = client.channels.cache.get("848398797729431573");
-  if (!channel) return console.error("The channel does not exist!");
+  if (!channel) return console.error("The channel does not exist!"); */
   setInterval(function() {
 
   channel.join()
