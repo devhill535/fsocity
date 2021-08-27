@@ -1,6 +1,5 @@
 require('dotenv').config();
 require("events").EventEmitter.defaultMaxListeners = 200;
-;
 const GuardianClient = require('./core/client.js');
 const client = new GuardianClient();
 client.on("ready", () => {
