@@ -1,4 +1,3 @@
-require('discord-reply');
 require('dotenv').config();
 require("events").EventEmitter.defaultMaxListeners = 200;
 ;
@@ -132,7 +131,12 @@ client.on("message", async message => {
     message.channel.send(help);
   }
 });
+client.on("message", message => {
+if(message.content.startsWith(prefix + 'server')) {
+message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
 
+
+}});
 
 
 
