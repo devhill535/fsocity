@@ -2,10 +2,18 @@ require('dotenv').config();
 require("events").EventEmitter.defaultMaxListeners = 200;
 const GuardianClient = require('./core/client.js');
 const client = new GuardianClient();
-client.on('ready', () => {
-        console.log(`[-------------- The bot && is ready! --------------]`)
-await client.user.setActivity(`f/help |Security is there`)
-});
+client.on("ready", () => {
+    client.user.setPresence({
+        activity: { 
+            name: 'f/help |Security is there',
+            type: 'WATCHING'
+        },
+        status: 'idle'
+    })
+})
+
+
+
 
 
 
