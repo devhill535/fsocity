@@ -5,7 +5,7 @@ const client = new GuardianClient();
 client.on("ready", () => {
     client.user.setPresence({
         activity: { 
-            name: `f/help | protection ${client.guilds.cache.size} servers`,
+            name: 'f/help |Security is there',
             type: 'WATCHING'
         },
         status: 'idle'
