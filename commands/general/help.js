@@ -12,22 +12,26 @@ class HelpCommand extends Command {
         const embed = this.client.util
             .embed()
             .setColor(0x7289da)
-            .setTitle('Guardian');
+            .setTitle('HELP COMMAND');
         const prefix = message.guild.prefix;
 
         const commands = [
-            `*The prefix is currently **\`${prefix}\`***\n`,
-            `*The following commands are available, running them displays more information and parameters:* **\`config\` \`prefix\` \`help\` \`limits\` \`recent\` \`reset\`**`
+            `*The prefix is currently **\`${prefix}\`***\n`
+            //`*The following commands are available, running them displays more information and parameters:* **\`config\` \`prefix\` \`help\` \`limits\` \`recent\` \`reset\`**`
         ];
 
         const info = [
-            `**[GitHub](https://github.com/plexidev/discord-guardian)**`,
-            `**[Support Server](https://discord.gg/plexidev)**`
+            `**add me [{here!}](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot)**`,
+            `**my [{Website}](http://www.fsocietybot.ml)**`,
+            `**support server [{join us!}](https://discord.gg/PftVmBUr5X)**`
         ];
 
         embed
-            .addField('Information', info.join('\n'))
-            .addField('Commands', commands.join('\n'));
+            .addField('security commands', '`help-security`')
+            .addField('security commands', '`help-security`')
+            .addField('security commands', '`help-security`')
+            .addField('security commands', '`help-security`')
+            .addField('info Commands', 'help-info');
 
         message.channel.send(embed);
     }
