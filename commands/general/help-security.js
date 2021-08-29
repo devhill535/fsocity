@@ -1,6 +1,6 @@
 const { Command } = require('discord-akairo');
 
-class HelpCommand extends Command {
+class SelpCommand extends Command {
     constructor() {
         super('help', {
             aliases: ['help', 'commands', 'help-security'],
@@ -33,4 +33,4 @@ class HelpCommand extends Command {
     }
 }
 
-module.exports = HelpCommand;
+module.exports = SelpCommand;
