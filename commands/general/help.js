@@ -2,8 +2,8 @@ const { Command } = require('discord-akairo');
 
 class HelpCommand extends Command {
     constructor() {
-        super('help', {
-            aliases: ['help', 'commands', '1'],
+        super('hp', {
+            aliases: ['h', 'commands', '1'],
             channel: 'guild'
         });
     }
