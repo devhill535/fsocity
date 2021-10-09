@@ -98,7 +98,7 @@ message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache
 
 
 client.on("message", async message => {
-  if (message.content.startsWith(prefix+"hhelp")) {
+  if (message.content.startsWith(prefix+"help")) {
    if (!message.channel.guild)
       return message.channel.send(
          "**❌ | Sorry This Command Only For Servers **")
