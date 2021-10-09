@@ -42,13 +42,7 @@ const cdtime = 10;
 
 
 
-// brdn server xoy messeag bka 
 
-client.on('guildCreate', guild => {
-  guild.systemChannel.send("<:emoji_66:850898273471430676> **Thanks for adding Fsociety**\n\n\n▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n`◦` Use `f/help` to view all of my commands\n`◦` If you need more help, please visit my support server <https://discord.gg/ekQRt7MZYq>\n\n▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n**Security system**\n\nSecurity Bot's protection system will be able to prevent any nuke threats, The bot will limit these actions:\n\n`-` banning members.\n`-` kicking members\n`-` deleting/creating roles.\n`-` deleting/creating channels.\n`-` adding bots to your server.")
-});
-
-// brdn server xoy messeag bka 
 
 
 client.on("message", async message => {
@@ -80,7 +74,7 @@ client.on("message", async message => {
       .addField("**┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
       .addField("**┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
       .addField("**┊Anti bot Commands : {2}**", "`antibot on \nantibot off`")
-      .addField("**┊Links : **", "add me [here!](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot)\nmy [Website](http://www.fsocietybot.ml)\nsupport server [join us!](https://discord.gg/PftVmBUr5X)")
+      .addField("**┊Links : **", `add me [here!](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)\nmy [Website](http://www.google.com)\nsupport server [join us!](https://discord.gg)`)
 
 
 
@@ -96,7 +90,7 @@ message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache
 
 }});
 
-*/
+
 
 
 client.on("message", async message => {
@@ -118,7 +112,7 @@ client.on("message", async message => {
       cooldown.delete(message.author.id);
 });
 
-*/
+
 
 
 client.on("message", async message => {
@@ -792,11 +786,11 @@ client.on("message", message => {
 
       .setDescription(`
 •••••
-❯  **dblstatistics** ;   [dblstatistics](https://dblstatistics.com/bot/803650426570014730)
+❯  **dblstatistics** ;   [dblstatistics](https://dblstatistics.com/bot/${client.user.id})
 •••••
-❯  **Top.gg** : [vote](https://top.gg/bot/803650426570014730/vote)
+❯  **Top.gg** : [vote](https://top.gg/bot/${client.user.id}/vote)
 •••••
-❯  **discordbotlist.com** : [vote](https://discordbotlist.com/bots/fsociety/upvote)
+❯  **discordbotlist.com** : [vote](https://discordbotlist.com)
 •••••`
       )
       .setColor("#FF1177")
