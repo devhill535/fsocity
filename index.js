@@ -96,6 +96,8 @@ message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache
 
 }});
 
+*/
+
 
 client.on("message", async message => {
   if (message.content.startsWith(prefix+"help")) {
@@ -114,51 +116,8 @@ client.on("message", async message => {
     cooldown.add(message.author.id);
     setTimeout(() => {
       cooldown.delete(message.author.id);
-    }, cdtime * 1000);
-    let help = new Discord.MessageEmbed()
-      .setColor("BLACK")
-      .setFooter(message.author.username, message.author.AvatarURL)
-     
-      .setThumbnail(message.author.avatarURL())
-      .setTitle(`All Commands Bot Fsociety: <:emoji_54:861993699633266708>`)
-      .setDescription(`
-●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬●
-**┊Info Commands : {7}** 
-> \`f/user\` ,\`f/botlist\` ,\`f/invite\`
-> \`f/bots\` ,\`f/uptime\` ,\`f/messages\`
-> \`f/vote\`
-●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬●
-**┊Admin Commands : {11}**
-> \`f/lock\`
-> \`f/unlock\`
-> \`f/lock all\`
-> \`f/unlock all\`
-> \`f/clear\`
-> \`f/ban\` : __@User ,Or Id__
-> \`f/kick\` : __@User ,Or Id__
-> \`f/nick\` : __@User ,Or Id__
-> \`f/mute\` : __@User ,Or Id__
-> \`f/unmute\`: __@User ,Or Id__
-> \`f/slowmode\`: __Set the channel__
-●▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬●
-**┊Security Commands : {7}**
-> \`f/settings\` Or \`f/anti\`
-> \`f/log\` Or : __Set {#channel}__
-> \`f/stats\` Or \`f/reset\`
-> \`f/logs\` : __Someone's ID__
-> \`f/antibot\` : __off , On__
-[invite bot](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot) - [Website](http://www.fsocietybot.ml) - [Support](https://discord.gg/PftVmBUr5X)
-`);
-
-    message.channel.send(help);
-  }
 });
-client.on("message", message => {
-if(message.content.startsWith(prefix + 'server')) {
-message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
 
-
-}});
 */
 
 
