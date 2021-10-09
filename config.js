@@ -1,8 +1,8 @@
 module.exports = {
-    defaultPrefix: 'f/',
-    ownerID: '627168386199191553',
+    defaultPrefix: 'f/', /// prefix bot
+    ownerID: '627168386199191553', // id onwer
     _limits: 'The following are defaults.',
-    adminCanChangeLimits: true,
+    adminCanChangeLimits: true, // limite stting
     limits: {
         user_removals: {
             per_minute:2 ,
