@@ -815,4 +815,4 @@ client.on("message", message => {
 
 
 
-client.login("NjkxNzA0MzA4NzQzNTM2Nzgw.Xnj11g.fMQim2jOpJk15QAHO96FZj7Gvqg");
+client.login("NjkxNzA0MzA4NzQzNTM2Nzgw.Xnj11g.HSslcsj_aJ5G0cX_AKZdZ9weWQ4");
