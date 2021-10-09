@@ -112,7 +112,7 @@ client.on("message", async message => {
        .setTitle(":link: Links")
       .addField(`:homes:`,`[ Support Server](https://discord.gg/robot)` )
       
-    . addField(`:envelope_with_arrow:`,`[ Invite Me](https://discord.com/api/oauth2/authorize?client_id=803650426570014730&permissions=8&scope=bot)`)
+    . addField(`:envelope_with_arrow:`,`[ Invite Me](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`)
      .setColor("#00000")
       .setThumbnail(message.author.avatarURL())
       
