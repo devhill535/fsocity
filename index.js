@@ -5,7 +5,7 @@ const client = new GuardianClient();
 client.on("ready", () => {
     client.user.setPresence({
         activity: { 
-            name: 'f/help |Security is there',
+            name: 'f.help | Feoxy is there',
             type: 'WATCHING'
         },
         status: 'idle'
@@ -33,7 +33,7 @@ const { RichEmbed  } = require('discord.js')
 const cooldown = new Set();
 const cdtime = 10;
 
- const prefix = "f/";
+ const prefix = "f.";
 
 
 
@@ -64,7 +64,7 @@ client.on("message", async message => {
       cooldown.delete(message.author.id);
     }, cdtime * 1000);
     let help = new Discord.MessageEmbed()
-      .setColor("BLACK")
+      .setColor("#3f00ff")
       .setFooter(message.author.username, message.author.AvatarURL)
      
       .setThumbnail(message.author.avatarURL())
@@ -113,7 +113,7 @@ client.on("message", async message => {
       .addField(`:homes:`,`[ Support Server](https://discord.gg/bexvXNbKAF)` )
       
     . addField(`:envelope_with_arrow:`,`[ Invite Me](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`)
-     .setColor("#00000")
+     .setColor("RANDOM")
       .setThumbnail(message.author.avatarURL())
       
        .setFooter(`${message.author.tag}`, message.author.avatarURL())
@@ -155,7 +155,7 @@ client.on("message", message => {
 ❯  **Channels** : ${client.channels.cache.size}
 •••••`
       )
-      .setColor("#0000")
+      .setColor("#3f00ff")
       .setThumbnail(message.author.avatarURL())
       .setTimestamp()
       .setFooter(`${message.author.tag}`, message.author.avatarURL());
@@ -178,7 +178,7 @@ client.on("message", async message => {
     });
      const lock = new Discord.MessageEmbed()
      
-      .setColor("#00000")
+      .setColor("#3f00ff")
       .setDescription(
         `🔒 | Locked Channel
 ❯ **Channel Name :** <#${message.channel.id}>
@@ -207,7 +207,7 @@ client.on("message", async message => {
       SEND_MESSAGES: null
     });
     const unlock = new Discord.MessageEmbed()
-      .setColor("#00000")
+      .setColor("#3f00ff")
       .setDescription(
         `🔓 | UnLocked Channel
 ❯ **Channel Name :** <#${message.channel.id}>
@@ -235,7 +235,7 @@ client.on("message", msg => {
     if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
     msg.delete();
     const here = new Discord.MessageEmbed()
-      .setColor("#00000")
+      .setColor("#3f00ff")
       .setDescription(
         `❌ | **Deleted Message**
  ❯ **Channel Name** : <#${msg.channel.id}>
@@ -262,7 +262,7 @@ client.on("message", msg => {
     if (msg.member.hasPermission("MANAGE_MESSAGES")) return;
     msg.delete();
     const here = new Discord.MessageEmbed()
-      .setColor("#00000")
+      .setColor("#3f00ff")
       .setDescription(
         `❌ | **Deleted Message**
 ❯ **Channel Name** : <#${msg.channel.id}>
@@ -313,7 +313,7 @@ client.on("message", message => {
       .then(m => {
         let embed = new Discord.MessageEmbed()
           .setTitle("Nicknamed User!")
-          .setColor("RANDOM")
+          .setColor("#3f00ff")
           .setThumbnail(message.author.avatarURL)
            .setFooter(message.author.username,  `https://cdn.discordapp.com/emojis/771689685579333673.gif?v=1`
 )
@@ -438,7 +438,7 @@ client.on("message", async message => {
       mute = await message.guild.roles.create({
         data: {
           name: "Muted",
-          color: "#0000",
+          color: "#3f00ff",
           permissions: []
         }
       });
@@ -559,7 +559,7 @@ client.on("message", async message => {
 client.on("guildCreate", guild => {
    let channel = client.channels.cache.get("896484681351057519");
   const embed = new Discord.MessageEmbed()
-    .setColor("GREEN")
+    .setColor("#3f00ff")
     .setTitle(`Joined!`)
     .setDescription(`
  **Name server: ${guild.name} **
@@ -576,7 +576,7 @@ channel.send(embed);
 client.on("guildDelete", guild => {
   let channel = client.channels.cache.get("896484681351057519");
   const embed = new Discord.MessageEmbed()
-    .setColor("RED")
+    .setColor("#3f00ff")
     .setTitle(`Kicked!`)
     .setDescription(`
 **Name server: ${guild.name}**
@@ -650,7 +650,7 @@ client.on("message", message => {
     var rn = args.slice(1).join(" ");
     let em = new Discord.MessageEmbed()
       .setTitle("Error :")
-      .setColor("808080")
+      .setColor("#3f00ff")
       .setDescription(
         `
   **Usage:**
@@ -664,7 +664,7 @@ client.on("message", message => {
     if (!user) return message.channel.send(em);
 
     let ffg = new Discord.MessageEmbed()
-      .setColor("#080808")
+      .setColor("#3f00ff")
       .setTimestamp()
       .setTitle("Warned!")
       .setDescription(
@@ -767,7 +767,7 @@ client.on("message", message => {
 ❯  **discordbotlist.com** : [vote](https://discordbotlist.com)
 •••••`
       )
-      .setColor("#FF1177")
+      .setColor("#3f00ff")
       .setThumbnail(message.author.avatarURL())
       .setTimestamp()
       .setFooter(`${message.author.tag}`, message.author.avatarURL());
