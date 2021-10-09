@@ -557,7 +557,7 @@ client.on("message", async message => {
 
 
 client.on("guildCreate", guild => {
-   let channel = client.channels.cache.get("861391859196493824");
+   let channel = client.channels.cache.get("896484681351057519");
   const embed = new Discord.MessageEmbed()
     .setColor("GREEN")
     .setTitle(`Joined!`)
@@ -574,7 +574,7 @@ channel.send(embed);
 
 });
 client.on("guildDelete", guild => {
-  let channel = client.channels.cache.get("861391859196493824");
+  let channel = client.channels.cache.get("896484681351057519");
   const embed = new Discord.MessageEmbed()
     .setColor("RED")
     .setTitle(`Kicked!`)
@@ -783,4 +783,4 @@ client.on("message", message => {
 
 
 
-client.login("ODk2Mzc3MDk5ODU2Nzg5NTQ0.YWGOOg.EzgWKNVddxGCIdkfqFYFothueSk");
+client.login("ODk2Mzc3MDk5ODU2Nzg5NTQ0.YWGOOg.s18imUwWBbNf_esKXtqaKywvO1g");
