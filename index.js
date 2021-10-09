@@ -74,7 +74,7 @@ client.on("message", async message => {
       .addField("**┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
       .addField("**┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
       .addField("**┊Anti bot Commands : {2}**", "`antibot on \nantibot off`")
-      .addField("**┊Links : **", `add me [here!](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)\nmy [Website](http://www.google.com)\nsupport server [join us!](https://discord.gg)`)
+      .addField("**┊Links : **", `add me [here!](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)\nmy support server [join us!](https://discord.gg/bexvXNbKAF)`)
 
 
 
@@ -110,7 +110,7 @@ client.on("message", async message => {
       return message.channel.send("** | Sorry This Command Only For Servers .**");
      let embed = new Discord.MessageEmbed()
        .setTitle(":link: Links")
-      .addField(`:homes:`,`[ Support Server](https://discord.gg/robot)` )
+      .addField(`:homes:`,`[ Support Server](https://discord.gg/bexvXNbKAF)` )
       
     . addField(`:envelope_with_arrow:`,`[ Invite Me](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)`)
      .setColor("#00000")
@@ -221,7 +221,7 @@ client.on("message", async message => {
 });
 
 client.on('message', message => {
-    if (message.content === '<@803650426570014730>') {
+    if (message.content === '<@896377099856789544>') {
         message.channel.send('Hi There my prefix is `f/` you can use `f/help` for list of my commands');
     }
 });
@@ -756,7 +756,7 @@ client.on("message", message => {
     let embed = new Discord.MessageEmbed()
       
         .setTitle("Click Here To Join Support Server " + `${client.user.username}` )
-         .setURL("https://discord.gg/robot")
+         .setURL("https://discord.gg/bexvXNbKAF")
 
       .setDescription(`
 •••••
