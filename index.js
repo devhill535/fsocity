@@ -5,7 +5,7 @@ const client = new GuardianClient();
 client.on("ready", () => {
     client.user.setPresence({
         activity: { 
-            name: 'f.help | Feoxy is there',
+            name: 'f.help | Feoxy is here',
             type: 'WATCHING'
         },
         status: 'idle'
