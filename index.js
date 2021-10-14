@@ -8,7 +8,7 @@ client.on("ready", () => {
             name: 'f.help | Feoxy is here',
             type: 'WATCHING'
         },
-        status: 'idle'
+        status: 'online'
     })
 })
 
