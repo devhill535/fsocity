@@ -811,9 +811,8 @@ calli.on("message", message => {
     let embed = new Discord.MessageEmbed()
     .setColor(`#589bff`)
     .setDescription(`
-<:crowne:866155257225674752> **The Discord Development**
 Anti Bot Has been updated 
-Enabled: ${callienabled} <:Security_Enabled:866999903413600256>
+Enabled: :white_check_mark:
 `)
     if (!message.channel.guild) return;
     if (message.author.id !== message.guild.ownerID) return;
@@ -845,9 +844,8 @@ calli.on("message", message => {
     .setColor(`#589bff`)
           .setDescription(
         `
-<:crowne:866155257225674752> **The Discord Development**
 Anti Bot Has been updated 
-Disabled: ${callidisabled} <:Security_Disabled:866999903375982612>
+Disabled: :x:
 `
       )
     if (!message.channel.guild) return;
@@ -881,9 +879,6 @@ fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
     });
 });
 
-const callienabled  = ":white_check_mark:";
-const callidisabled = ":x:";
-const callicolor    = "RED";
 
 
 
