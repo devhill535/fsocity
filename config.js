@@ -1,5 +1,5 @@
 module.exports = {
-    defaultPrefix: 'f/', /// prefix bot
+    defaultPrefix: 'f.', /// prefix bot
     ownerID: '627168386199191553', // id onwer
     _limits: 'The following are defaults.',
     adminCanChangeLimits: true, // limite stting
