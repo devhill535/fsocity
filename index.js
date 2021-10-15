@@ -795,9 +795,95 @@ client.on("message", message => {
 
 
 
+let antibots = JSON.parse(fs.readFileSync("./antibots.json", "utf8"));
+///////////////////////////////////////////////////////////////////////////////
+calli.on("message", message => {
+  if (message.content.startsWith(prefix + "anti bot on")) {
+  if (cooldown.has(message.author.id)) {
+      return message.channel.send(`You have to wait 5 seconds`).then(m => {
+        m.delete({ timeout: cdtime * 600 });
+      });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    let embed = new Discord.MessageEmbed()
+    .setColor(`#589bff`)
+    .setDescription(`
+<:crowne:866155257225674752> **The Discord Development**
+Anti Bot Has been updated 
+Enabled: ${callienabled} <:Security_Enabled:866999903413600256>
+`)
+    if (!message.channel.guild) return;
+    if (message.author.id !== message.guild.ownerID) return;
+    antibots[message.guild.id] = {
+      onoff: "On"
+    };
+    message.channel.send(embed);
+    fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
+      if (err)
+        console.error(err).catch(err => {
+          console.error(err);
+        });
+    });
+  }
+});
+///////////////////////////////////////////////////////////////////////////////
+calli.on("message", message => {
+  if (message.content.startsWith(prefix + "anti bot off")) {
+  if (cooldown.has(message.author.id)) {
+      return message.channel.send(`You have to wait 5 seconds`).then(m => {
+        m.delete({ timeout: cdtime * 600 });
+      });
+    }
+    cooldown.add(message.author.id);
+    setTimeout(() => {
+      cooldown.delete(message.author.id);
+    }, cdtime * 1000);
+    let embed = new Discord.MessageEmbed()
+    .setColor(`#589bff`)
+          .setDescription(
+        `
+<:crowne:866155257225674752> **The Discord Development**
+Anti Bot Has been updated 
+Disabled: ${callidisabled} <:Security_Disabled:866999903375982612>
+`
+      )
+    if (!message.channel.guild) return;
+    if (message.author.id !== message.guild.ownerID) return;
+    antibots[message.guild.id] = {
+      onoff: "Off"
+    };
+    message.channel.send(embed);
+    fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
+      if (err)
+        console.error(err).catch(err => {
+          console.error(err);
+        });
+    });
+  }
+});
+///////////////////////////////////////////////////////////////////////////////
+calli.on("guildMemberAdd", member => {
+  if (!antibots[member.guild.id])
+    antibots[member.guild.id] = {
+      onoff: "Off"
+    };
+  if (antibots[member.guild.id].onoff === "Off") return;
+  if (member.user.bot) return member.kick();
+});
 
+fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
+  if (err)
+    console.error(err).catch(err => {
+      console.error(err);
+    });
+});
 
-
+const callienabled  = ":white_check_mark:";
+const callidisabled = ":x:";
+const callicolor    = "RED";
 
 
 
