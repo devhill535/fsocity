@@ -28,15 +28,7 @@ ONLINE
   
     }, 5000)
   });
-client.on("ready", () => {
-    client.user.setPresence({
-        activity: { 
-            name: 'f.help | Feoxy is here',
-            type: 'WATCHING'
-        },
-        status: 'online'
-    })
-})
+
 
 
 
