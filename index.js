@@ -91,7 +91,7 @@ client.on("message", async message => {
       .addField("**┊Info Commands : {7}**", "`user, botlist, invite, bots, uptime, messages, vote`")
       .addField("**┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
       .addField("**┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
-      .addField("**┊Anti bot Commands : {2}**", "`antibot on \nantibot off`")
+    //  .addField("**┊Anti bot Commands : {2}**", "`antibot on \nantibot off`")
       .addField("**┊Links : **", `add me [here!](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)\nmy support server [join us!](https://discord.gg/bexvXNbKAF)`)
 
 
@@ -101,12 +101,6 @@ client.on("message", async message => {
     message.channel.send(help);
   }
 });
-client.on("message", message => {
-if(message.content.startsWith(prefix + 'server')) {
-message.reply(`I am in  ${client.guilds.cache.size} Servers ${client.users.cache.size} Users` );
-
-
-}});
 client.on("message", async message => {
   if (message.content.toLowerCase() === prefix + "invite") {
      if (!message.channel.guild)
@@ -791,92 +785,6 @@ client.on("message", message => {
       .setFooter(`${message.author.tag}`, message.author.avatarURL());
     message.channel.send({ embed });
   }
-});
-
-
-
-let antibots = JSON.parse(fs.readFileSync("./antibots.json", "utf8"));
-///////////////////////////////////////////////////////////////////////////////
-calli.on("message", message => {
-  if (message.content.startsWith(prefix + "anti bot on")) {
-  if (cooldown.has(message.author.id)) {
-      return message.channel.send(`You have to wait 5 seconds`).then(m => {
-        m.delete({ timeout: cdtime * 600 });
-      });
-    }
-    cooldown.add(message.author.id);
-    setTimeout(() => {
-      cooldown.delete(message.author.id);
-    }, cdtime * 1000);
-    let embed = new Discord.MessageEmbed()
-    .setColor(`#589bff`)
-    .setDescription(`
-Anti Bot Has been updated 
-Enabled: :white_check_mark:
-`)
-    if (!message.channel.guild) return;
-    if (message.author.id !== message.guild.ownerID) return;
-    antibots[message.guild.id] = {
-      onoff: "On"
-    };
-    message.channel.send(embed);
-    fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
-      if (err)
-        console.error(err).catch(err => {
-          console.error(err);
-        });
-    });
-  }
-});
-///////////////////////////////////////////////////////////////////////////////
-calli.on("message", message => {
-  if (message.content.startsWith(prefix + "anti bot off")) {
-  if (cooldown.has(message.author.id)) {
-      return message.channel.send(`You have to wait 5 seconds`).then(m => {
-        m.delete({ timeout: cdtime * 600 });
-      });
-    }
-    cooldown.add(message.author.id);
-    setTimeout(() => {
-      cooldown.delete(message.author.id);
-    }, cdtime * 1000);
-    let embed = new Discord.MessageEmbed()
-    .setColor(`#589bff`)
-          .setDescription(
-        `
-Anti Bot Has been updated 
-Disabled: :x:
-`
-      )
-    if (!message.channel.guild) return;
-    if (message.author.id !== message.guild.ownerID) return;
-    antibots[message.guild.id] = {
-      onoff: "Off"
-    };
-    message.channel.send(embed);
-    fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
-      if (err)
-        console.error(err).catch(err => {
-          console.error(err);
-        });
-    });
-  }
-});
-///////////////////////////////////////////////////////////////////////////////
-calli.on("guildMemberAdd", member => {
-  if (!antibots[member.guild.id])
-    antibots[member.guild.id] = {
-      onoff: "Off"
-    };
-  if (antibots[member.guild.id].onoff === "Off") return;
-  if (member.user.bot) return member.kick();
-});
-
-fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
-  if (err)
-    console.error(err).catch(err => {
-      console.error(err);
-    });
 });
 
 
