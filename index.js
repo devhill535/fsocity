@@ -780,7 +780,7 @@ const calli = new Client({ disableEveryone: true });
 let antibots = JSON.parse(fs.readFileSync("./antibots.json", "utf8"));
 ///////////////////////////////////////////////////////////////////////////////
 calli.on("message", message => {
-  if (message.content.startsWith(prefix + "anti bot on")) {
+  if (message.content.startsWith(prefix + "antibot-on")) {
   if (cooldown.has(message.author.id)) {
       return message.channel.send(`You have to wait 5 seconds`).then(m => {
         m.delete({ timeout: cdtime * 600 });
@@ -812,7 +812,7 @@ Enabled: ${callienabled}
 });
 ///////////////////////////////////////////////////////////////////////////////
 calli.on("message", message => {
-  if (message.content.startsWith(prefix + "anti bot off")) {
+  if (message.content.startsWith(prefix + "antibot-off")) {
   if (cooldown.has(message.author.id)) {
       return message.channel.send(`You have to wait 5 seconds`).then(m => {
         m.delete({ timeout: cdtime * 600 });
