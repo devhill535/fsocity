@@ -793,7 +793,7 @@ client.on("message", message => {
   }
 });
 ///////////////////////////////////////////////////////////////////////////////
-const calli = new Client({ disableEveryone: true });
+
 ///////////////////////////////////////////////////////////////////////////////
 let antibots = JSON.parse(fs.readFileSync("./antibots.json", "utf8"));
 ///////////////////////////////////////////////////////////////////////////////
@@ -809,10 +809,10 @@ calli.on("message", message => {
       cooldown.delete(message.author.id);
     }, cdtime * 1000);
     let embed = new Discord.MessageEmbed()
-    .setColor(callicolor)
+    .setColor("RED")
     .setDescription(`
 Anti Bot Has been updated 
-Enabled: ${callienabled}
+Enabled: ${clientnabled}
 `)
     if (!message.channel.guild) return;
     if (message.author.id !== message.guild.ownerID) return;
@@ -841,11 +841,11 @@ calli.on("message", message => {
       cooldown.delete(message.author.id);
     }, cdtime * 1000);
     let embed = new Discord.MessageEmbed()
-    .setColor(callicolor)
+    .setColor("RED")
           .setDescription(
         `
 Anti Bot Has been updated 
-Disabled: ${callidisabled}
+Disabled: ${clientdisabled}
 `
       )
     if (!message.channel.guild) return;
