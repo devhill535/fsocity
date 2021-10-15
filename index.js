@@ -2,6 +2,32 @@ require('dotenv').config();
 require("events").EventEmitter.defaultMaxListeners = 200;
 const GuardianClient = require('./core/client.js');
 const client = new GuardianClient();
+
+client.on("ready", () => {
+ console.log(`
+ONLINE
+`
+	    );
+  let channel = client.channels.cache.get("898665579991433326");
+  if (!channel) return console.error("The channel does not exist!");
+  setInterval(function() {
+
+  channel.join()
+  .then(connection => console.log('🟢 | Connected'))
+  .catch(console.error);
+}, 30000)
+
+  let botStatus = [
+    `f.help | Server's : ${client.guilds.cache.size}`,
+    `f.help | Feoxy is here`
+  ]
+  
+  setInterval(function() {
+    let status = botStatus[Math.floor(Math.random() * botStatus.length)];
+    client.user.setActivity(status, {type: "WATCHING"});
+  
+    }, 5000)
+  });
 client.on("ready", () => {
     client.user.setPresence({
         activity: { 
