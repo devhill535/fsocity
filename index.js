@@ -234,7 +234,7 @@ client.on("message", async message => {
 
 client.on('message', message => {
     if (message.content === '<@896377099856789544>') {
-        message.channel.send('Hi There my prefix is `f/` you can use `f/help` for list of my commands');
+        message.channel.send('Hi There my prefix is `f.` you can use `f.help` for list of my commands');
     }
 });
 
