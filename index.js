@@ -19,7 +19,7 @@ ONLINE
 
   let botStatus = [
     `f.help | Server's : ${client.guilds.cache.size}`,
-    `f.help | Feoxy is here : ${client.user.cache.size}`,
+    `f.help | Feoxy is here : ${client.memberCount.cache.size}`,
   ]
   
   setInterval(function() {
