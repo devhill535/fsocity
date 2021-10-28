@@ -5,37 +5,37 @@ module.exports = {
     adminCanChangeLimits: true, // limite stting
     limits: {
         user_removals: {
-            per_minute:2 ,
-            per_hour: 2
+            per_minute:5 ,
+            per_hour: 5
         },
         role_creations: {
-            per_minute: 2,
-            per_hour: 2
+            per_minute: 5,
+            per_hour: 5
         },
         channel_creations: {
-            per_minute: 2,
-            per_hour: 2
+            per_minute: 5,
+            per_hour: 5
         },
         role_deletions: {
-            per_minute: 1,
-            per_hour: 1
+            per_minute: 5,
+            per_hour: 5
         },
         channel_deletions: {
-            per_minute:2,
-            per_hour: 2
+            per_minute:5,
+            per_hour: 5
         },
         unbans: {
-            per_minute: 2,
-            per_hour: 2
+            per_minute: 5,
+            per_hour: 5
         
     },
         emoji_creations: {
-            per_minute: 3,
-            per_hour: 3
+            per_minute: 5,
+            per_hour: 5
         },
         emoji_deletions: {
-            per_minute: 3,
-            per_hour: 3
+            per_minute: 5,
+            per_hour: 5
         }
     },
     
