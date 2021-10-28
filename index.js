@@ -19,7 +19,7 @@ ONLINE
 
   let botStatus = [
     `f.help | Server's : ${client.guilds.cache.size}`,
-    `f.help | Feoxy is here Users: ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
+    `f.help | Feoxy is here : Users  : ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)}
 `,
   ]
   
