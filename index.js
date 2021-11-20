@@ -91,12 +91,7 @@ client.on("message", async message => {
       .addField("**┊Info Commands : {7}**", "`user, botlist, invite, bots, uptime, messages, vote`")
       .addField("**┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
       .addField("**┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
-    //  .addField("**┊Anti bot Commands : {2}**", "`antibot on \nantibot off`")
       .addField("**┊Links : **", `add me [here!](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)\nmy support server [join us!](https://discord.gg/bexvXNbKAF)`)
-
- .setImage("https://cdn.discordapp.com/attachments/782297903988867113/911640701501063269/standard.gif")
-
-
 
     message.channel.send(help);
   }
