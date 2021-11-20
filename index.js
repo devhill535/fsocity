@@ -94,7 +94,7 @@ client.on("message", async message => {
     //  .addField("**┊Anti bot Commands : {2}**", "`antibot on \nantibot off`")
       .addField("**┊Links : **", `add me [here!](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)\nmy support server [join us!](https://discord.gg/bexvXNbKAF)`)
 
- .setImage("https://cdn.discordapp.com/attachments/896739448610517104/911614892962906132/F72AF9B0-5B43-441C-B0B1-BF42F4482841.png")
+ .setImage("https://cdn.discordapp.com/attachments/782297903988867113/911640701501063269/standard.gif")
 
 
 
