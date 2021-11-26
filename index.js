@@ -88,10 +88,10 @@ client.on("message", async message => {
       .setThumbnail(message.author.avatarURL())
       .setImage("https://media.discordapp.net/attachments/896739448610517104/911614892962906132/F72AF9B0-5B43-441C-B0B1-BF42F4482841.png")
       .setDescription("Here is the list of commands!\nneed more help? Come join our [guild](https://discord.gg/bexvXNbKAF)")
-      .addField("**┊Info Commands : {7}**", "`user, botlist, invite, bots, uptime, messages, vote`")
-      .addField("**┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
-      .addField("**┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
-      .addField("**┊Links : **", `add me [here!](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)\nmy support server [join us!](https://discord.gg/bexvXNbKAF)`)
+      .addField("**🌍 ┊Info Commands : {7}**", "`user, botlist, invite, bots, uptime, messages, vote`")
+      .addField("**🔧┊Admin Commands : {11}**", "`lock, unlock, lock all, unlock all, clear, ban, kick, nick, mute, unmute, slowmode`")
+      .addField("**🛡┊Security Commands : {7}**", "`settings, anti, log, stats, logs`")
+      .addField("**🔗┊Links : **", `add me [here!](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot)\nmy support server [join us!](https://discord.gg/bexvXNbKAF)`)
 
     message.channel.send(help);
   }
